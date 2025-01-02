@@ -1,0 +1,237 @@
+<mxfile host="65bd71144e">
+    <diagram id="skUC_ynNRuBziFcnJ-_n" name="Page-1">
+        <mxGraphModel dx="1483" dy="988" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="93" value="" style="whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="3730" y="290" width="260" height="570" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;b&gt;&lt;u&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Recept&lt;/font&gt;&lt;/u&gt;&lt;br&gt;&lt;i&gt;ID (PK)&lt;br&gt;&lt;/i&gt;&lt;/b&gt;Titel&lt;br&gt;Foto gerecht&lt;br&gt;Beschrijving gerecht&lt;br&gt;Keuken&lt;br&gt;Type&lt;br&gt;Rating&lt;br&gt;Favoriet&lt;br&gt;Prijs&lt;br&gt;Calorieën&lt;br&gt;(RG1) Ingrediënt titel&lt;br&gt;(RG1) Ingrediënt&amp;nbsp;beschrijving&lt;br&gt;(RG1) Ingrediënt&amp;nbsp;hoeveelheid&lt;br&gt;(RG2)&amp;nbsp;Stap nummer&lt;br&gt;(RG2) Stap beschrijving&lt;br&gt;(RG3) Foto gebruiker&lt;br&gt;(RG3)&amp;nbsp;Naam gebruiker&lt;br&gt;(RG3)&amp;nbsp;Opmerking" style="whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="40" width="170" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;b&gt;&lt;u&gt;Ingrediënt&lt;/u&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-style: italic; font-size: 12px;&quot;&gt;ID&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;i&gt;Recept ID&lt;/i&gt;&lt;br&gt;Ingrediënt&amp;nbsp;titel&lt;br&gt;Ingrediënt&amp;nbsp;beschrijving&lt;br&gt;Ingrediënt hoeveelheid&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=14;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="40" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;u&gt;Bereidingswijze&lt;br&gt;&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;font style=&quot;font-style: italic;&quot;&gt;ID&lt;/font&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;i&gt;Recept ID&lt;/i&gt;&lt;br&gt;Stap nummer&lt;br&gt;Stap beschrijving&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="180" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial; font-size: 14px;&quot;&gt;&lt;u&gt;Opmerking&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-style: italic;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;i style=&quot;background-color: initial;&quot;&gt;Recept ID&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Foto gebruiker&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Naam gebruiker&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Opmerking&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="290" width="120" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;b&gt;&lt;u&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Recept&lt;/font&gt;&lt;/u&gt;&lt;br&gt;&lt;i&gt;ID (PK)&lt;br&gt;&lt;/i&gt;&lt;/b&gt;Titel&lt;br&gt;Foto gerecht&lt;br&gt;Beschrijving gerecht&lt;br&gt;Keuken&lt;br&gt;Type&lt;br&gt;Rating&lt;br&gt;Favoriet&lt;br&gt;Prijs&lt;br&gt;Calorieën&lt;br&gt;" style="whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="40" width="170" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;Ingrediënt&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-style: italic; font-size: 12px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;gt; ID&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;i style=&quot;background-color: initial;&quot;&gt;Recept ID&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;gt; Ingrediënt&amp;nbsp;titel&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;gt; Ingrediënt&amp;nbsp;beschrijving&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ingrediënt hoeveelheid&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=14;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="40" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;u&gt;Bereidingswijze&lt;br&gt;&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;font style=&quot;font-style: italic;&quot;&gt;ID&lt;/font&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;i&gt;Recept ID&lt;/i&gt;&lt;br&gt;Stap nummer&lt;br&gt;Stap beschrijving&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="180" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial; font-size: 14px;&quot;&gt;&lt;u&gt;Opmerking&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-style: italic;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;gt; ID&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;i style=&quot;background-color: initial;&quot;&gt;Recept ID&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;gt; Foto gebruiker&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;gt; Naam gebruiker&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Opmerking&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="290" width="120" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;b&gt;&lt;u&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Recept&lt;/font&gt;&lt;/u&gt;&lt;br&gt;&lt;i&gt;ID (PK)&lt;br&gt;&lt;/i&gt;&lt;/b&gt;Titel&lt;br&gt;Foto gerecht&lt;br&gt;Beschrijving gerecht&lt;br&gt;Keuken&lt;br&gt;Type&lt;br&gt;* Rating&lt;br&gt;** Favoriet&lt;br&gt;* Prijs&lt;br&gt;* Calorieën" style="whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="980" y="40" width="130" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;Ingrediënt&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-style: italic; font-size: 12px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;i style=&quot;background-color: initial;&quot;&gt;Recept ID&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ingrediënt hoeveelheid&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=14;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="40" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;u&gt;Bereidingswijze&lt;br&gt;&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;font style=&quot;font-style: italic;&quot;&gt;ID&lt;/font&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;i&gt;Recept ID&lt;/i&gt;&lt;br&gt;Stap nummer&lt;br&gt;Stap beschrijving&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="140" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial; font-size: 14px;&quot;&gt;&lt;u&gt;Opmerking&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-style: italic;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;i style=&quot;background-color: initial;&quot;&gt;Recept ID&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Gebruiker ID&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Opmerking&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="250" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;u&gt;Artikel&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ingrediënt&amp;nbsp;titel&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ingrediënt&amp;nbsp;beschrijving&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;* Prijs&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;* Calorieën&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;* Verpakking (i.e. stuks, gram, ml, etc.)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;* Verpakking hoeveelheid (i.e. hoeveel zit in één verpakking)&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="1270" y="40" width="140" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;&lt;b&gt;Gebruiker&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Foto gebruiker&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Naam gebruiker&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="1250" y="250" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 14px; text-decoration-line: underline;&quot;&gt;** Favoriet&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;ID&lt;br&gt;&lt;/font&gt;Recept ID&lt;br&gt;Favoriet&lt;br&gt;&lt;b&gt;Gebruiker ID&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="350" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial; font-size: 14px; text-decoration-line: underline;&quot;&gt;* Rating&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Recept ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;Rating waarde&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="450" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;b&gt;&lt;u&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Recept&lt;/font&gt;&lt;/u&gt;&lt;br&gt;&lt;i&gt;ID (PK)&lt;br&gt;&lt;/i&gt;&lt;/b&gt;Titel&lt;br&gt;Foto gerecht&lt;br&gt;Beschrijving gerecht&lt;br&gt;* Keuken-&lt;b&gt;&lt;i&gt;ID&lt;/i&gt;&lt;/b&gt;&lt;br&gt;* Type-&lt;i&gt;&lt;b&gt;ID&lt;/b&gt;&lt;/i&gt;" style="whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1560" y="40" width="130" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;Ingrediënt&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-style: italic; font-size: 12px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;i style=&quot;background-color: initial;&quot;&gt;Recept ID&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ingrediënt hoeveelheid&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=14;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1700" y="40" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;u&gt;Bereidingswijze&lt;br&gt;&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;font style=&quot;font-style: italic;&quot;&gt;ID&lt;/font&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;i&gt;Recept ID&lt;/i&gt;&lt;br&gt;Stap nummer&lt;br&gt;Stap beschrijving&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1700" y="140" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial; font-size: 14px;&quot;&gt;&lt;u&gt;Opmerking&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-style: italic;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;i style=&quot;background-color: initial;&quot;&gt;Recept ID&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Gebruiker ID&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Opmerking&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1700" y="250" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;u&gt;Artikel&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ingrediënt&amp;nbsp;titel&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ingrediënt&amp;nbsp;beschrijving&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Prijs&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Calorieën&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Verpakking&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Verpakking hoeveelheid&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="1850" y="40" width="140" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;&lt;b&gt;Gebruiker&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Foto gebruiker&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Naam gebruiker&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="1830" y="250" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 14px; text-decoration-line: underline;&quot;&gt;Favoriet&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;ID&lt;br&gt;&lt;/font&gt;Recept ID&lt;br&gt;Favoriet&lt;br&gt;&lt;b&gt;Gebruiker ID&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1700" y="350" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial; font-size: 14px; text-decoration-line: underline;&quot;&gt;Rating&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Recept ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;Rating waarde&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1700" y="450" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;" parent="1" source="29" target="32" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Keuken&lt;/font&gt;&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Omschrijving (opties)&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="1700" y="530" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.01;entryY=0.62;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;" parent="1" source="30" target="32" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Type&lt;/font&gt;&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Omschrijving (opties)&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="1700" y="610" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;KeukenType&lt;/font&gt;&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Record description (is het een keuken of een type?)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Omschrijving&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="1870" y="540" width="210" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" style="edgeStyle=none;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="35" target="36" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2490" y="350"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="49" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="35" target="37" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2680" y="350"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="50" style="edgeStyle=none;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="35" target="38" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2890" y="350"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="58" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.013;entryY=0.369;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="35" target="41" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="35" target="42" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="&lt;b&gt;&lt;u&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Recept&lt;/font&gt;&lt;/u&gt;&lt;br&gt;&lt;i&gt;ID (PK)&lt;br&gt;&lt;/i&gt;&lt;/b&gt;Titel&lt;br&gt;Foto gerecht&lt;br&gt;Beschrijving gerecht&lt;br&gt;Keuken-ID&lt;br&gt;Type-ID" style="whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="2610" y="200" width="130" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;Ingrediënt&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-style: italic; font-size: 12px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;i style=&quot;background-color: initial;&quot;&gt;Recept ID&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;i style=&quot;background-color: initial;&quot;&gt;Artikel ID&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ingrediënt hoeveelheid&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=14;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="2420" y="380" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;u&gt;Bereidingswijze&lt;br&gt;&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;font style=&quot;font-style: italic;&quot;&gt;ID&lt;/font&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;i&gt;Recept ID&lt;/i&gt;&lt;br&gt;Stap nummer&lt;br&gt;Stap beschrijving&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="2610" y="375" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial; font-size: 14px;&quot;&gt;&lt;u&gt;Opmerking&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-style: italic;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;i style=&quot;background-color: initial;&quot;&gt;Recept ID&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Gebruiker ID&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Opmerking&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="2830" y="380" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="39" target="36" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;u&gt;Artikel&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ingrediënt&amp;nbsp;titel&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ingrediënt&amp;nbsp;beschrijving&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Prijs&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Calorieën&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Eenheid&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Verpakking&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="2420" y="510" width="140" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.849;entryY=1.015;entryDx=0;entryDy=0;fontSize=14;endArrow=ERmany;endFill=0;entryPerimeter=0;" parent="1" source="40" target="41" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="62" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="40" target="38" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" style="edgeStyle=none;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1.021;entryY=0.599;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="40" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2900" y="300"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;&lt;b&gt;Gebruiker&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Foto gebruiker&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Naam gebruiker&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;i&gt;Password&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;i&gt;Email&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="3000" y="370" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 14px; text-decoration-line: underline;&quot;&gt;Favoriet&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;ID&lt;br&gt;&lt;/font&gt;Recept ID&lt;br&gt;Favoriet&lt;br&gt;&lt;b&gt;Gebruiker ID&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="2950" y="200" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial; font-size: 14px; text-decoration-line: underline;&quot;&gt;Rating&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Recept ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;Rating waarde&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="2610" y="40" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.008;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="47" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" style="edgeStyle=none;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.001;entryY=0.464;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="47" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;KeukenType&lt;/font&gt;&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;record_type (K, T)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Omschrijving&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="2420" y="200" width="125" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;Ingrediënt&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;gerecht_id&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;artikel_id&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ingrediënt hoeveelheid&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=14;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="3500" y="320" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;u&gt;Bereidingswijze&lt;br&gt;&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;font style=&quot;&quot;&gt;ID&lt;/font&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;&quot;&gt;gerecht_id&lt;br&gt;Stap nummer&lt;br&gt;Stap beschrijving&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="3800" y="500" width="120" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" style="html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="77" target="73" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;u&gt;Artikel&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ingrediënt&amp;nbsp;naam&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Ingrediënt&amp;nbsp;beschrijving&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Prijs&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Calorieën&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Eenheid&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Verpakking&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="3500" y="480" width="140" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="81" target="87" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="3852.7300000000005" y="177.8699999999999" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="94" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1.008;entryY=0.396;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="81" target="93" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;&lt;b&gt;User&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Foto gebruiker&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Naam gebruiker&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Password&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Email&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="4080" y="320" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial; font-size: 14px; text-decoration-line: underline;&quot;&gt;Rating&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;gerecht_id&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Rating waarde&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="3800" y="690" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" style="html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;fontSize=14;endArrow=ERmany;endFill=0;entryX=-0.005;entryY=0.103;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="86" target="87" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="3780" y="60" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="85" style="html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;fontSize=14;endArrow=ERmany;endFill=0;entryX=-0.008;entryY=0.318;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="86" edge="1" target="87">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="3730" y="150" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="86" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;KeukenType&lt;/font&gt;&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;record_type (K, T)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Omschrijving&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="3510" y="40" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=-0.006;exitY=0.921;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=14;endArrow=ERmany;endFill=0;exitPerimeter=0;" parent="1" source="87" target="73" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" style="html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=14;endArrow=ERmany;endFill=0;" parent="1" source="87" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="3860" y="290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="87" value="&lt;u&gt;&lt;b&gt;Gerecht&lt;br&gt;&lt;/b&gt;&lt;/u&gt;ID&lt;br&gt;keuken_id&lt;br&gt;type ID&lt;br&gt;user ID&lt;br&gt;datum_toegevoegd&lt;br&gt;titel&lt;br&gt;korte_omschrijving&lt;br&gt;lange_omschrijving&lt;br&gt;afbeelding" style="whiteSpace=wrap;html=1;fontSize=14;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="3770" y="40" width="180" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="&lt;b&gt;&lt;u&gt;Gerecht info&lt;br&gt;&lt;/u&gt;&lt;/b&gt;ID&lt;br&gt;record_type (O, B, W, F)&lt;br&gt;gerecht_id&lt;br&gt;user_id&lt;br&gt;datum&lt;br&gt;nummeriekveld&lt;br&gt;tekstveld" style="whiteSpace=wrap;html=1;fontSize=14;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="3781.25" y="320" width="157.5" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial; font-size: 14px;&quot;&gt;&lt;u&gt;Opmerking&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ID&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;font style=&quot;&quot;&gt;gerecht_id&lt;div style=&quot;&quot;&gt;user_id&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Opmerking&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="3800" y="600" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 14px; text-decoration-line: underline;&quot;&gt;Favoriet&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;ID&lt;br&gt;&lt;/font&gt;gerecht_id&lt;br&gt;Favoriet&lt;br&gt;user_id&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="3800" y="760" width="120" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

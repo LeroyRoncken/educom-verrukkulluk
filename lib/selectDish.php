@@ -31,8 +31,8 @@ class dish{
         $rating = $this->selectRecordType($id, 'R');
         $steps = $this->selectRecordType($id, 'S');
         $comments = $this->selectRecordType($id, 'C');
-        $kitchen = $this->selectKitchenOrType($output["kitchen_id"]);
-        $type = $this->selectKitchenOrType($output["type_id"]);
+        $kitchen = $this->selectKitchenType($output["kitchen_id"]);
+        $type = $this->selectKitchenType($output["type_id"]);
         $favorite = $this->selectRecordType($id, 'F');
 
         $dish_array[] = [
@@ -104,10 +104,6 @@ class dish{
 
     private function selectInfo($dish_id, $record_type) {
         return($this->info->selectInfo($dish_id, $record_type));
-    }
-
-    public function selectKitchenOrType($kitchentype_id) {
-        return($this->selectKitchenType($kitchentype_id));
     }
 
     private function selectKitchenType($kitchentype_id) {

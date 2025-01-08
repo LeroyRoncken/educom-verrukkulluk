@@ -33,7 +33,7 @@ class dishInfo {
 
             $fetchUser = [];
             
-            if ($record_type == 'O' || $record_type =='F') {
+            if ($record_type == 'C' || $record_type =='F') {
                 
                 $user_id = $row["user_id"];
                 $fetchUser = $this->selectUser($user_id);

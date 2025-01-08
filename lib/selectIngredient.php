@@ -11,7 +11,6 @@ class ingredient {
     }
 
     private function selectArticle($article_id) {
-        //article.selectArticle($article_id);
         $selArt = $this->art->selectArticle($article_id);
         return($selArt);
     }
@@ -27,13 +26,7 @@ class ingredient {
             $art_id = $row["article_id"];
             $ingrArt = $this->selectArticle($art_id);
         
-            $return[] = [
-                "id" => $row["id"],
-                "dish_id" => $row["dish_id"],
-                "article_id" => $art_id,
-                "name" => $ingrArt["name"],
-                "description" => $ingrArt["description"]
-            ];
+            $return[] = [...$row, ...$ingrArt];
         }
 
         return($return);

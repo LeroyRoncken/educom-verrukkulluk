@@ -27,7 +27,7 @@ $dish = new dish($db->getConnection());
 // $dataInfo = $info->selectInfo(1, 'O');
 // $addFavorite = $info->addFavorite(1,1);
 // $deleteFavorite = $info->deleteFavorite(1,1);
-$dataDish = $dish->selectDish(1);
+$dataDish = $dish->selectDish();
 
 
 /// RETURN

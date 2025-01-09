@@ -19,39 +19,50 @@ class dish{
     }
     
 
-    public function selectDish($id) {
-        $sql = "SELECT * FROM dish WHERE id = $id";
-        $result = mysqli_query($this->connection, $sql);
-        $output = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    public function selectDish($id = NULL) {
         
-        $user = $this->selectUser($output["user_id"]);
-        $ingredients = $this->selectIngredient($id);
-        $calories = $this->calcCalories($ingredients);
-        $price = $this->calcPrice($ingredients);
-        $rating = $this->selectRecordType($id, 'R');
-        $steps = $this->selectRecordType($id, 'S');
-        $comments = $this->selectRecordType($id, 'C');
-        $kitchen = $this->selectKitchenType($output["kitchen_id"]);
-        $type = $this->selectKitchenType($output["type_id"]);
-        $favorite = $this->selectRecordType($id, 'F');
+        $dish_array = [];
 
-        $dish_array[] = [
-            "Dish" => $output,
-            "User" => $user,
-            "Ingredients" => $ingredients,
-            "Calories" => $calories,
-            "Price" => $price,
-            "Rating" => $rating,
-            "Steps" => $steps,
-            "Comments" => $comments,
-            "Kitchen" => $kitchen,
-            "Type" => $type,
-            "Favorite" => $favorite
-        ];
-                
+        $sql = "SELECT * FROM dish";
+        if ($id) {
+            $sql .= " WHERE id = $id";
+        }
+
+        $result = mysqli_query($this->connection, $sql);
+        
+        while ($output = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+        
+            $user = $this->selectUser($output["user_id"]);
+            $ingredients = $this->selectIngredient($output["id"]);
+            $calories = $this->calcCalories($ingredients);
+            $price = $this->calcPrice($ingredients);
+            $rating = $this->selectRecordType($output["id"], 'R');
+            $steps = $this->selectRecordType($output["id"], 'S');
+            $comments = $this->selectRecordType($output["id"], 'C');
+            $kitchen = $this->selectKitchenType($output["kitchen_id"]);
+            $type = $this->selectKitchenType($output["type_id"]);
+            $favorite = $this->selectRecordType($output["id"], 'F');
+
+            $dish_array[] = [
+                "Dish" => $output,
+                "User" => $user,
+                "Ingredients" => $ingredients,
+                "Calories (kcal)" => $calories,
+                "Price (cents)" => $price,
+                "Rating" => $rating,
+                "Steps" => $steps,
+                "Comments" => $comments,
+                "Kitchen" => $kitchen,
+                "Type" => $type,
+                "Favorite" => $favorite
+            ];
+        }
+
         return($dish_array);
     }
 
+
+    // External functions
 
     private function selectUser($user_id) {
         return($this->user->selectUser($user_id));
@@ -59,6 +70,18 @@ class dish{
 
     private function selectIngredient($dish_id) {
         return($this->ingredient->selectIngredient($dish_id));
+    }
+
+    private function selectArticle($article_id) {
+        return($this->article->selectArticle($article_id));
+    }
+
+    private function selectInfo($dish_id, $record_type) {
+        return($this->info->selectInfo($dish_id, $record_type));
+    }
+
+    private function selectKitchenType($kitchentype_id) {
+        return($this->kitchenType->selectKitchenType($kitchentype_id));
     }
 
 
@@ -85,11 +108,6 @@ class dish{
         return($totalPrice);
     }
 
-    private function selectArticle($article_id) {
-        return($this->article->selectArticle($article_id));
-    }
-
-
     // Select a specific record type
 
     public function selectRecordType($dish_id, $record_type) {
@@ -101,13 +119,5 @@ class dish{
         }
         return($info);
     }
-
-    private function selectInfo($dish_id, $record_type) {
-        return($this->info->selectInfo($dish_id, $record_type));
-    }
-
-    private function selectKitchenType($kitchentype_id) {
-        return($this->kitchenType->selectKitchenType($kitchentype_id));
-    }
-
+    
 }

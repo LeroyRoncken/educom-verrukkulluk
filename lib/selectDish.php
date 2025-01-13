@@ -102,10 +102,18 @@ class dish{
         foreach ($ingredients as $ingr) {
             $article = $this->selectArticle($ingr["article_id"]);
             
-            $required_pack = ceil( $ingr["quantity"] / $article["packaging"] );
+            $required_pack = $this->requiredPackages($ingr);
+            // $required_pack = ceil( $ingr["quantity"] / $article["packaging"] );
             $totalPrice += $required_pack * $article["price_cent"];
         }
         return($totalPrice);
+    }
+
+    public function requiredPackages($ingredients) {
+        $article = $this->selectArticle($ingredients["article_id"]);
+        
+        $required_pack = ceil( $ingredients["quantity"] / $article["packaging"] );
+        return($required_pack);
     }
 
     // Select a specific record type

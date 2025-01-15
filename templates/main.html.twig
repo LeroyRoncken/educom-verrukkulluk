@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css" />
+    {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> #}
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <link rel="stylesheet" href="vegas/vegas.css"/>
 
@@ -64,34 +65,41 @@
 <div class="container-fluid">
 
     {# Header #}
-    <div class="row">
 
-        {# {% block header %}
-        {% endblock %} #}
-        
-        {# Logo #}
-        <div class="col-4">
-            <img class=headerLogo src="assets/img/logo-v2.png"/>
-        </div>
-        <div class="col-4"></div>
-        
-        {# Clickable menu button #}
-        <div class="col-4">
-            <div id="menu" class="menu-trigger"></div>
-        </div>
+    {# {% block header %}
+    {% endblock %} #}
 
-        {# Dropdown menu #}
-        <div id="menuClose" class="dropdown">
-            <div class="row">
-                <div class="col-5">
-                    <div><img class="menuLogo" src="assets/img/logo-v2.png"/ onclick="redirectHomepage()"></div>
-                </div>
-                <div class="col-3 menuButton"><h1>Mijn Favorieten</h1></div>
-                <div class="col-4 menuButton"><h1>Mijn Boodschappenlijst</h1></div>
+    <div id="background-image">
+        
+        <div class="row">
+
+            {# Logo #}
+            <div class="col-4">
+                <img class=headerLogo src="assets/img/logo-v2.png"/>
             </div>
-        </div>
+            
+            <div class="col-4"></div>
+            
+            {# Clickable menu button #}
+            <div class="col-4">
+                <div id="menu" class="menu-trigger"></div>
+            </div>
 
+            {# Dropdown menu #}
+            <div id="menuClose" class="dropdown">
+                <div class="row">
+                    <div class="col-5">
+                        <div><img class="menuLogo" src="assets/img/logo-v2.png"/ onclick="redirectHomepage()"></div>
+                    </div>
+                    <div class="col-3 menuButton"><h1>Mijn Favorieten</h1></div>
+                    <div class="col-4 menuButton"><h1>Mijn Boodschappenlijst</h1></div>
+                </div>
+            </div>
+            
+        </div>
+        
     </div>
+
 
     {# Body #}
     <div class="row">

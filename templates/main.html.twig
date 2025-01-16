@@ -19,7 +19,7 @@
     <script>
         $(document).ready(function () {
             $("#menu").click(function() {
-                $(".dropdown").slideDown()
+                $(".menuDropdown").slideDown()
                 $(".headerLogo").fadeOut()
             })
         })
@@ -27,7 +27,7 @@
         $(document).ready(function () {
             $("#menuClose").click(function() {
                 // if button is pressed, toggle, else slideUp
-                $(".dropdown").slideUp()
+                $(".menuDropdown").slideUp()
                 $(".headerLogo").fadeIn()
             })
         })
@@ -59,7 +59,7 @@
 
             {# Logo #}
             <div class="col-4">
-                <img class=headerLogo src="assets/img/logo-v2.png"/>
+                <img class=headerLogo src="assets/img/logo-v2.png">
             </div>
             
             <div class="col-4"></div>
@@ -70,10 +70,10 @@
             </div>
 
             {# Dropdown menu #}
-            <div id="menuClose" class="dropdown">
+            <div id="menuClose" class="menuDropdown boxShadow">
                 <div class="row">
                     <div class="col-5">
-                        <div><img class="menuLogo" src="assets/img/logo-v2.png"/ onclick="redirectHomepage()"></div>
+                        <div><img class="menuLogo" src="assets/img/logo-v2.png" onclick="redirectHomepage()"></div>
                     </div>
                     <div class="col-3 menuButton"><h1>Mijn Favorieten</h1></div>
                     <div class="col-4 menuButton"><h1>Mijn Boodschappenlijst</h1></div>
@@ -87,21 +87,140 @@
 
     {## Body ##}
 
+    {# <i class="fa fa-calendar"></i> FontAwesome <a href="https://fontawesome.com/icons?d=gallery&m=free">Documentation</a><br>
+    <i class="fa fa-file-pdf"></i><a href="https://www.layoutit.com/build">Layout-it</a> #}
+    
+    <div class="row spacer"></div>
+
     <div class="row">
 
-        {# Agenda #}
-        <div class="col-md-3">
-            <h2>Agenda</h2>
-            <i class="fa fa-calendar"></i> FontAwesome <a href="https://fontawesome.com/icons?d=gallery&m=free">Documentation</a><br>
-            <i class="fa fa-file-pdf"></i><a href="https://www.layoutit.com/build">Layout-it</a>
+        <div class="col-4">
+            
+            {# Agenda #}
+            <div class="row">
+                
+                <div class="col-2"></div>
+                
+                <div class="col-8 agenda boxShadow">
+                    
+                    <div><img class="titleLogo" src="assets/img/verrukkulluk-agenda.png"></div>
+
+                    {# Agenda entries, maybe use loop instead? #}
+                    <div class="row">
+
+                        <div class="col-1"></div>
+                        <div class="col-2">
+                            <div class="agendaIcon"></div>
+                        </div>
+
+                        <div class="col-8">
+                            <div>
+                                <h4 class="agendaTitle">De perfecte pizzabodem</h4>
+                                <p class="agendaDescription">Een workshop over de wetenschap achter het perfecte pizzadeeg, onder leiding van Donatello.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-1"></div>
+                        <div class="col-2">
+                            <div class="agendaIcon"></div>
+                        </div>
+
+                        <div class="col-8">
+                            <div>
+                                <h4 class="agendaTitle">Pizza bakken</h4>
+                                <p class="agendaDescription">Leer de geheimen van het bakken van de klassieke New Yorkse pizza samen met Raphael.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-1"></div>
+                        <div class="col-2">
+                            <div class="agendaIcon"></div>
+                        </div>
+
+                        <div class="col-8">
+                            <div>
+                                <h4 class="agendaTitle">Pizza proeverij</h4>
+                                <p class="agendaDescription">Leonardo neemt je mee op een ontdekkingsreis van nieuwe smaakcombinaties en leert je ze op nieuwe manieren waarderen.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-1"></div>
+                        <div class="col-2">
+                            <div class="agendaIcon"></div>
+                        </div>
+
+                        <div class="col-8">
+                            <div>
+                                <h4 class="agendaTitle">Ninja pizza</h4>
+                                <p class="agendaDescription">Leer van Michelangelo de eeuwenoude kunst van het laten verdwijnen van pizza - zonder sporen.</p><br>
+                            </div>
+                        </div>
+
+                    </div>                    
+
+                </div>
+                {# <div class="col-2"></div> #}
+            </div>
+
+            <div class="row spacer"></div>
+
+            {# Login form #}
+            <div class="row">
+                
+                <div class="col-2"></div>
+                
+                <div class="col-8 login boxShadow">
+                    
+                    <div>
+                        <img class="titleLogo" src="assets/img/verrukkulluk-login.png">
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="col-1"></div>
+                        
+                        <div class="col-10">
+
+                            <form method="post" action="https://api.dev-master.ninja/html/form">
+                                    <p class="loginDescription">Email</p>
+                                    <input type="email" name="email" class="loginInput"><br>
+                                    <p class="loginDescription">Wachtwoord</p>
+                                    <input type="password" name="password" class="loginInput">
+                                    <input type="submit" name="loginButton" value="Login" class="loginButton boxShadow">
+                            </form>
+                        
+                        </div>
+                    
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
         {# Dishes #}
-        <div class="col-md-9">
+        <div class="col-8">
             <h2>Content</h2>
             {%  block content %}
             {%  endblock %}
         </div>
+
+        {# Create pagination block in homepage.html.twig instead of the spacers below #}
+        <div class="row spacer"></div>
+        <div class="row spacer"></div>
 
     </div>
 

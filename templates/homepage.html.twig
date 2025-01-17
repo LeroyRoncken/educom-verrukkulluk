@@ -39,23 +39,22 @@
         <li>
             <img src="{{ record.dish.image }}" style="width: 100px; height: 100px;">
 
-            {{ record.dish.name }}
-            {# sub-loop #}
-            <ul>
-                {% for ingr in record.ingredients %}
-                    <li>
-                        <span {% if ingr.id < 2 %}style='color: #F00'{% endif %}>{{ ingr.name }}</span>
+            <div>{{ record.dish.name }}</div>
 
-                        {# if #}
-                        {%  if ingr.id == 3 %}
-                            <strong>Dit is ID 3!</strong>
-                        {%  endif  %}
-                    </li>
-                {% endfor %}
-            </ul>
+            {# <div>{{ record.rating }}</div> #}
+
+            <div>{{ record.dish.description_short }}</div>
+
+            {# Knop naar detailpagina #}
+            <div><h4>Smullen!</h4></div>
+
+            <div>eu {{ (record.price / 100)|number_format(2)}}</div>
+            <div>kcal {{ record.calories|round }}</div>
+            <div></div>
         </li>
     {% endfor %}
     <ul>
+
      {# Dump #}
        {# <pre>
         {{ dump(data) }}

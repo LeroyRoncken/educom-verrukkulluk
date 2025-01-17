@@ -55,6 +55,7 @@ h3, h4, h5 {
     margin-left: auto;
     margin-right: auto;
     width: 85%;
+    cursor: pointer;
     background-image: radial-gradient(farthest-corner at 60% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
     /* z-index: 5000 !important; */
 }
@@ -142,14 +143,14 @@ html, body {
 }
 
 .agendaIcon{
-    display: block;
+    /* display: block; */
     /* margin: auto; */
     background-color: var(--white);
     height: 30px;
     width: 30px;
     /* margin-left: auto;
     margin-right: auto; */
-    margin-top: 20%;
+    margin-top: 10%;
     /* margin-bottom: auto; */
 }
 

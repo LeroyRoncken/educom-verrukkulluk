@@ -59,7 +59,7 @@
 
         {# Logo #}
             <div class="col-4">
-                <img class=headerLogo src="assets/img/logo-v2.png">
+                <img class=headerLogo src="assets/img/logo-v2.png" onclick="redirectHomepage()">
             </div>
             
             <div class="col-4"></div>
@@ -108,67 +108,31 @@
                 {# Agenda entries, maybe use loop instead? #}
                     <div class="row">
 
-                        <div class="col-1"></div>
-                        <div class="col-2">
-                            <div class="agendaIcon"></div>
-                        </div>
+                        {% set agendaEntry = {'De perfecte pizzabodem': 'Een workshop over de wetenschap achter het perfecte pizzadeeg, onder leiding van Donatello.', 'Pizza bakken': 'Leer de geheimen van het bakken van de klassieke New Yorkse pizza samen met Raphael.', 'Pizza proeverij': 'Leonardo neemt je mee op een ontdekkingsreis van nieuwe smaakcombinaties en leert je ze op nieuwe manieren waarderen.', 'Ninja pizza': 'Leer van Michelangelo de eeuwenoude kunst van het laten verdwijnen van pizza - zonder sporen.'} %}
 
-                        <div class="col-8">
-                            <div>
-                                <h4 class="agendaTitle">De perfecte pizzabodem</h4>
-                                <p class="agendaDescription">Een workshop over de wetenschap achter het perfecte pizzadeeg, onder leiding van Donatello.</p>
+                        {% for title, description in agendaEntry %}
+                            
+                            <div class="row">
+
+                                <div class="col-1"></div>
+                                <div class="col-2 d-flex justify-content-center">
+                                    <div class="agendaIcon"></div>
+                                </div>
+
+                                <div class="col-8">
+                                    <div>
+                                        <h4 class="agendaTitle">{{ title }}</h4>
+                                        <p class="agendaDescription">{{ description }}</p>
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
 
+                        {% endfor %}
+                    
                     </div>
 
-                    <div class="row">
-
-                        <div class="col-1"></div>
-                        <div class="col-2">
-                            <div class="agendaIcon"></div>
-                        </div>
-
-                        <div class="col-8">
-                            <div>
-                                <h4 class="agendaTitle">Pizza bakken</h4>
-                                <p class="agendaDescription">Leer de geheimen van het bakken van de klassieke New Yorkse pizza samen met Raphael.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-1"></div>
-                        <div class="col-2">
-                            <div class="agendaIcon"></div>
-                        </div>
-
-                        <div class="col-8">
-                            <div>
-                                <h4 class="agendaTitle">Pizza proeverij</h4>
-                                <p class="agendaDescription">Leonardo neemt je mee op een ontdekkingsreis van nieuwe smaakcombinaties en leert je ze op nieuwe manieren waarderen.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-1"></div>
-                        <div class="col-2">
-                            <div class="agendaIcon"></div>
-                        </div>
-
-                        <div class="col-8">
-                            <div>
-                                <h4 class="agendaTitle">Ninja pizza</h4>
-                                <p class="agendaDescription">Leer van Michelangelo de eeuwenoude kunst van het laten verdwijnen van pizza - zonder sporen.</p><br>
-                            </div>
-                        </div>
-
-                    </div>                    
+                    <div class="row spacer"></div>
 
                 </div>
                 {# <div class="col-1"></div> #}

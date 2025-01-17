@@ -89,86 +89,70 @@
 
     {# <i class="fa fa-calendar"></i> FontAwesome <a href="https://fontawesome.com/icons?d=gallery&m=free">Documentation</a><br>
     <i class="fa fa-file-pdf"></i><a href="https://www.layoutit.com/build">Layout-it</a> #}
-    
-    <div class="row spacer"></div>
 
-    <div class="row">
+    <div class="row body">
 
         <div class="col-4">
             
         {# Agenda #}
-            <div class="row">
-                
-                <div class="col-1"></div>
-                
-                <div class="col-10 agenda boxShadow">
-                    
-                    <div><img class="titleLogo" src="assets/img/verrukkulluk-agenda.png"></div>
+            <div class="row agenda boxShadow">
+                                    
+                <div><img class="titleLogo" src="assets/img/verrukkulluk-agenda.png"></div>
 
-                {# Agenda entries, maybe use loop instead? #}
-                    <div class="row">
+            {# Agenda entries, maybe use loop instead? #}
+                <div class="row">
 
-                        {% set agendaEntry = {'De perfecte pizzabodem': 'Een workshop over de wetenschap achter het perfecte pizzadeeg, onder leiding van Donatello.', 'Pizza bakken': 'Leer de geheimen van het bakken van de klassieke New Yorkse pizza samen met Raphael.', 'Pizza proeverij': 'Leonardo neemt je mee op een ontdekkingsreis van nieuwe smaakcombinaties en leert je ze op nieuwe manieren waarderen.', 'Ninja pizza': 'Leer van Michelangelo de eeuwenoude kunst van het laten verdwijnen van pizza - zonder sporen.'} %}
+                    {% set agendaEntry = {'De perfecte pizzabodem': 'Een workshop over de wetenschap achter het perfecte pizzadeeg, onder leiding van Donatello.', 'Pizza bakken': 'Leer de geheimen van het bakken van de klassieke New Yorkse pizza samen met Raphael.', 'Pizza proeverij': 'Leonardo neemt je mee op een ontdekkingsreis van nieuwe smaakcombinaties en leert je ze op nieuwe manieren waarderen.', 'Ninja pizza': 'Leer van Michelangelo de eeuwenoude kunst van het laten verdwijnen van pizza - zonder sporen.'} %}
 
-                        {% for title, description in agendaEntry %}
-                            
-                            <div class="row">
+                    {% for title, description in agendaEntry %}
+                        
+                        <div class="row">
 
-                                <div class="col-1"></div>
-                                <div class="col-2 d-flex justify-content-center">
-                                    <div class="agendaIcon"></div>
-                                </div>
-
-                                <div class="col-8">
-                                    <div>
-                                        <h4 class="agendaTitle">{{ title }}</h4>
-                                        <p class="agendaDescription">{{ description }}</p>
-                                    </div>
-                                </div>
-
+                            <div class="col-1"></div>
+                            <div class="col-2 d-flex justify-content-center">
+                                <div class="agendaIcon"></div>
                             </div>
 
-                        {% endfor %}
-                    
-                    </div>
+                            <div class="col-8">
+                                <div>
+                                    <h4 class="agendaTitle">{{ title }}</h4>
+                                    <p class="agendaDescription">{{ description }}</p>
+                                </div>
+                            </div>
 
-                    <div class="row spacer"></div>
+                        </div>
 
+                    {% endfor %}
+                
                 </div>
-                {# <div class="col-1"></div> #}
+
+                <div class="row spacer"></div>
+
             </div>
 
-            <div class="row spacer"></div>
-
         {# Login form #}
-            <div class="row">
-                
-                <div class="col-1"></div>
-                
-                <div class="col-10 login boxShadow">
+            <div class="row login boxShadow">
+
+                <div>
+                    <img class="titleLogo" src="assets/img/verrukkulluk-login.png">
+                </div>
+
+                <div class="row">
                     
-                    <div>
-                        <img class="titleLogo" src="assets/img/verrukkulluk-login.png">
-                    </div>
+                    <div class="col-1"></div>
+                    
+                    <div class="col-10">
 
-                    <div class="row">
-                        
-                        <div class="col-1"></div>
-                        
-                        <div class="col-10">
-
-                            <form method="post" action="https://api.dev-master.ninja/html/form">
-                                    <p class="loginDescription">Email</p>
-                                    <input type="email" name="email" class="loginInput"><br>
-                                    <p class="loginDescription">Wachtwoord</p>
-                                    <input type="password" name="password" class="loginInput">
-                                    <input type="submit" name="loginButton" value="Login" class="loginButton boxShadow">
-                            </form>
-                        
-                        </div>
+                        <form method="post" action="https://api.dev-master.ninja/html/form">
+                                <p class="loginDescription">Email</p>
+                                <input type="email" name="email" class="loginInput"><br>
+                                <p class="loginDescription">Wachtwoord</p>
+                                <input type="password" name="password" class="loginInput">
+                                <input type="submit" name="loginButton" value="Login" class="loginButton boxShadow">
+                        </form>
                     
                     </div>
-
+                
                 </div>
 
             </div>
@@ -182,8 +166,8 @@
         </div>
 
         {# Create pagination block in homepage.html.twig, use the spacers below in detail.html.twig #}
-        <div class="row spacer"></div>
-        <div class="row spacer"></div>
+        {# <div class="row spacer"></div>
+        <div class="row spacer"></div> #}
 
     </div>
 

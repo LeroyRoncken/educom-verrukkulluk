@@ -5,6 +5,7 @@
 <img src="assets/img/verrukkulluk-burger.png"/>
 {% endblock %} #}
 
+{# Header #}
 {# Script and images for the Vegas carousel #}
 {% block vegasCarousel %}
     $(document).ready( function() {
@@ -28,36 +29,49 @@
 {% endblock %}
 
 
-{# nu de block content op in de main pagina vullen #}
+{# Body #}
 {% block content %}
 
-    <h4>Dit is de template {{ title }}</h4>
+    <div class = "row content">
 
-{# Loop #}
-    <ul>
-    {% for record in data %}
-        <li>
-            <img src="{{ record.dish.image }}" style="width: 100px; height: 100px;">
+        {% for record in data %}
 
-            <div>{{ record.dish.name }}</div>
+            <div class="col-6 boxShadow">
 
-            {# <div>{{ record.rating }}</div> #}
+                <div class="row">
+                    <img src="{{ record.dish.image }}" style="width: 100px; height: 100px;">
+                </div>
 
-            <div>{{ record.dish.description_short }}</div>
+                <div class="row spacer"></div>
 
-            {# Knop naar detailpagina #}
-            <div><h4>Smullen!</h4></div>
+                <div class="row">
+                    <div class="col-9"><h2>{{ record.dish.name }}</h2></div>
+                    <div class="col-3">Rating {# {{ record.rating }} #} </div>
+                </div>
 
-            <div>eu {{ (record.price / 100)|number_format(2)}}</div>
-            <div>kcal {{ record.calories|round }}</div>
-            <div></div>
-        </li>
-    {% endfor %}
-    <ul>
+                <div class="row">
+                    <div>{{ record.dish.description_short }}</div>
+                </div>
 
-     {# Dump #}
-       {# <pre>
-        {{ dump(data) }}
-       </pre> #}
+                <div class="row spacer"></div>
+
+                <div class="row">
+
+                    <div class="col-5">
+                        {# Knop naar detailpagina #}
+                        <div><h4>Smullen!</h4></div>
+                    </div>
+
+                    <div class="col-7">
+                        <div>eu {{ (record.price / 100)|number_format(2)}}
+                        kcal {{ record.calories|round }}</div>
+                    </div>
+                
+                </div>
+
+            </div>
+
+        {% endfor %}
+    </div>
 
 {% endblock %}

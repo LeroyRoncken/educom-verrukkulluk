@@ -121,6 +121,15 @@ html, body {
     margin: 20px;
 }
 
+.titleLogo{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 .boxShadow{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -130,15 +139,6 @@ html, body {
     /* width: 100%;
     height: 100%; */
     /* margin: 10%; */
-}
-
-.titleLogo{
-    display: block;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
 }
 
 .agendaIcon{
@@ -179,8 +179,10 @@ html, body {
     display: block;
     margin: auto;
     width: 100%;
+    border-radius: 3px;
+    border-style: none;
     color: var(--black);
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .loginButton{

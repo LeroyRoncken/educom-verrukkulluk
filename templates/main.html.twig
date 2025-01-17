@@ -2,7 +2,7 @@
 
 <head>
 
-    <title>Het is Verrukkuluk! {{ TITEL }} </title>
+    <title>Het is Verrukkuluk! - {{ title }} - </title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css" />
@@ -50,26 +50,26 @@
 
 <div class="container-fluid">
 
-    {## Header ##}
+{## Header ##}
 
     {# Vegas carousel #}
     <div {% block headerImage %} {% endblock %}>
         
         <div class="row">
 
-            {# Logo #}
+        {# Logo #}
             <div class="col-4">
                 <img class=headerLogo src="assets/img/logo-v2.png">
             </div>
             
             <div class="col-4"></div>
             
-            {# Clickable menu button #}
+        {# Clickable menu button #}
             <div class="col-4">
                 <div id="menu" class="menu-trigger"></div>
             </div>
 
-            {# Dropdown menu #}
+        {# Dropdown menu #}
             <div id="menuClose" class="menuDropdown boxShadow">
                 <div class="row">
                     <div class="col-5">
@@ -85,7 +85,7 @@
     </div>
 
 
-    {## Body ##}
+{## Body ##}
 
     {# <i class="fa fa-calendar"></i> FontAwesome <a href="https://fontawesome.com/icons?d=gallery&m=free">Documentation</a><br>
     <i class="fa fa-file-pdf"></i><a href="https://www.layoutit.com/build">Layout-it</a> #}
@@ -96,16 +96,16 @@
 
         <div class="col-4">
             
-            {# Agenda #}
+        {# Agenda #}
             <div class="row">
                 
-                <div class="col-2"></div>
+                <div class="col-1"></div>
                 
-                <div class="col-8 agenda boxShadow">
+                <div class="col-10 agenda boxShadow">
                     
                     <div><img class="titleLogo" src="assets/img/verrukkulluk-agenda.png"></div>
 
-                    {# Agenda entries, maybe use loop instead? #}
+                {# Agenda entries, maybe use loop instead? #}
                     <div class="row">
 
                         <div class="col-1"></div>
@@ -171,17 +171,17 @@
                     </div>                    
 
                 </div>
-                {# <div class="col-2"></div> #}
+                {# <div class="col-1"></div> #}
             </div>
 
             <div class="row spacer"></div>
 
-            {# Login form #}
+        {# Login form #}
             <div class="row">
                 
-                <div class="col-2"></div>
+                <div class="col-1"></div>
                 
-                <div class="col-8 login boxShadow">
+                <div class="col-10 login boxShadow">
                     
                     <div>
                         <img class="titleLogo" src="assets/img/verrukkulluk-login.png">
@@ -211,25 +211,24 @@
 
         </div>
 
-        {# Dishes #}
+    {# Dishes #}
         <div class="col-8">
-            <h2>Content</h2>
             {%  block content %}
             {%  endblock %}
         </div>
 
-        {# Create pagination block in homepage.html.twig instead of the spacers below #}
+        {# Create pagination block in homepage.html.twig, use the spacers below in detail.html.twig #}
         <div class="row spacer"></div>
         <div class="row spacer"></div>
 
     </div>
 
 
-    {## Footer ##}
+{## Footer ##}
 
     <div class="row footer">
         
-        {# Logo #}
+    {# Logo #}
         <div class="col-2">
 
             <div class="row">
@@ -238,15 +237,15 @@
 
         </div>
 
-        {# Content #}
+    {# Content #}
         <div class="col-2">
 
-            {# Contact #}
+        {# Contact #}
             <div class="row">
                 <div ><img class=footerContact src="assets/img/verrukkulluk-contact.png"/></div>
             </div>
 
-            {# Information #}
+        {# Information #}
             <div class="row">
                 <div >
                     <p class = footerContent>

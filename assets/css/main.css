@@ -125,9 +125,13 @@ html, body {
     margin: 20px;
 }
 
-.body{
+/* .marginGlobal{
     margin: var(--marginGlobal);
-}
+} */
+
+/* .body{
+    margin: var(--marginGlobal);
+} */
 
 .titleLogo{
     display: block;
@@ -144,7 +148,7 @@ html, body {
 
 .agenda {
     background-color: var(--lighter-green);
-    margin: var(--marginGlobal);
+    /* margin: var(--marginGlobal); */
     /* width: 100%;
     height: 100%; */
     /* margin: 10%; */
@@ -174,7 +178,7 @@ html, body {
 
 .login{
     background-color: var(--darker-red);
-    margin: var(--marginGlobal);
+    /* margin: var(--marginGlobal); */
 }
 
 .loginDescription{
@@ -210,10 +214,10 @@ html, body {
     font-size: 32px;
 }
 
-.content{
+/* .content{
     height: 100%;
     margin: var(--marginGlobal);
-}
+} */
 
 
 /** FOOTER **/

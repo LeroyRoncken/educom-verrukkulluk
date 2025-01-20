@@ -32,11 +32,11 @@
 {# Body #}
 {% block content %}
 
-    <div class = "row content">
+    <div class = "row">
 
         {% for record in data %}
 
-            <div class="col-6 boxShadow">
+            <div class="col-5 offset-1 boxShadow mb-5">
 
                 <div class="row">
                     <img src="{{ record.dish.image }}" style="width: 100px; height: 100px;">

@@ -55,11 +55,14 @@
 
                 {# <div class="row spacer"></div> #}
 
-                <div class="row">
+                <div class="row mb-3">
 
                     <div class="col-5">
                         {# Knop naar detailpagina #}
-                        <div><button type=submit class="smullenKnop boxShadow my-3"><h4 class="smullenText">Smullen!</h4></div>
+                        <a href="http://localhost/educom-verrukkulluk/index.php?gerecht_id={{ record.dish.id }}&action=detail" class="smullenKnop boxShadow">
+                            Smullen!
+                        </a>
+                        {# <a href="http://localhost/educom-verrukkulluk/index.php"><button type=submit class="smullenKnop boxShadow my-3"><h4 class="smullenText">Smullen!</h4></a> #}
                     </div>
 
                     <div class="col-7 d-flex align-items-center justify-content-end">

@@ -218,10 +218,16 @@ html, body {
     font-size: 32px;
 }
 
-/* .content{
-    height: 100%;
-    margin: var(--marginGlobal);
+/* .dishCardBootstrap{
+    height: 700px;
 } */
+
+.dishCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 600px; */
+}
 
 .dishImage{
     width: 100%;

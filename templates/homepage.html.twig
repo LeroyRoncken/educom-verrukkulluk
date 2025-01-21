@@ -36,7 +36,7 @@
 
         {% for record in data %}
 
-            <div class="col-5 offset-1 boxShadow mb-5">
+            <div class="col-5 offset-1 dishCard boxShadow mb-5">
 
                 <div class="row">
                     <div class="col-12 p-0">
@@ -44,9 +44,7 @@
                     </div>
                 </div>
 
-                <div class="row spacer"></div>
-
-                <div class="row">
+                <div class="row mt-4">
                     <div class="col-9 dishTitle"><h2>{{ record.dish.name }}</h2></div>
                     <div class="col-3 dishRating">Rating {# {{ record.rating }} #} </div>
                 </div>

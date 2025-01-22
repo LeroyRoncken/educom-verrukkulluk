@@ -18,29 +18,23 @@
     <script type="text/javascript" language="javascript" src="assets/bootstrap/js/bootstrap.js"></script>
     <script src="vegas/vegas.js"></script>
 
-    {# Memu dropdown #}
     <script>
+    
         $(document).ready(function () {
+            
+            // Memu dropdown
             $("#menu").click(function() {
                 $(".menuDropdown").slideDown()
                 $(".headerLogo").fadeOut()
             })
-        })
 
-        $(document).ready(function () {
             $("#menuClose").click(function() {
                 // if button is pressed, toggle, else slideUp
                 $(".menuDropdown").slideUp()
                 $(".headerLogo").fadeIn()
             })
-        })
 
-    </script>
-
-    {# Vegas #}
-    <script>
-        $(document).ready( function() {
-            
+            // Vegas
             var mySlides = [];
 
             {% for record in data %}
@@ -54,6 +48,7 @@
             })
 
         })
+
     </script>
 
 </head>

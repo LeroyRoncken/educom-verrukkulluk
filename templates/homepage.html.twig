@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="dishDescrShort"><br>{{ record.dish.description_short }}<br><br></div>
+                    <div class="dishDescr"><br>{{ record.dish.description_short }}<br><br></div>
                 </div>
 
                 {# <div class="row spacer"></div> #}
@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="col-7 d-flex align-items-center justify-content-end">
-                        <div class="dishDescrShort">
+                        <div class="dishNumbers">
                             <i class="fa-solid fa-euro-sign dishIcon"></i>{{ (record.price / 100)|number_format(2)}}
                             <i class="fa-solid fa-fire dishIcon"></i>{{ record.calories|round }}
                         </div>

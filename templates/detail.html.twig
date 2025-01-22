@@ -1,5 +1,126 @@
 {% extends "main.html.twig" %}
 
-{% block header %}
+{# {% block header %}
 <h1>Hallo Bram</h1>
+{% endblock %} #}
+
+
+{% block content %}
+
+    <div class="row">
+
+        <div class="col-1"></div>
+            
+            <div class="col-11">
+
+                <div class="row boxshadow mb-5">
+
+                    {% for record in data %}
+
+                        <div class="col-6 p-0">
+                            <img class="detailImage" src="{{ record.dish.image }}"/>
+                        </div>
+
+                        <div class="col-5 offset-1">
+                            
+                            <div class="row my-3">
+                                <div class="dishNumbers">
+                                    <i class="fa-solid fa-euro-sign dishIcon"></i>{{ (record.price / 100)|number_format(2)}}
+                                    <i class="fa-solid fa-fire dishIcon"></i>{{ record.calories|round }}
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-9 dishTitle"><h2>{{ record.dish.name }}</h2></div>
+                                <div class="col-3 dishRating">Rating {# {{ record.rating }} #} </div>
+                            </div>
+
+                            <div class="row d-flex align-items-center mb-2">
+                                <div class="col-6">
+                                    <span class="kitchenType">Keuken</span>
+                                    <span class="detailKTDescr">{{ record.kitchen.description }}</span>
+                                </div>
+                                <div class="col-5 offset-1">
+                                    <span class="col-2 kitchenType">Type</span>
+                                    <span class="col-3 detailKTDescr">{{ record.type.description }}</span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="dishDescr">{{ record.dish.description_long }}</div>
+                            </div>
+
+                            <div class="col-5">
+                                <a href="http://localhost/educom-verrukkulluk/index.php?dish_id={{ record.dish.id }}&action=detail" class="smullenKnop boxShadow mt-5">
+                                    Op lijst
+                                </a>
+                            </div>
+                        
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+                <div class="row boxShadow">
+                    <div class="col-11 offset-1 boxShadow">
+                        Ingrediënten
+                    </div>
+                </div>
+
+                <pre>
+                    <br>{{ dump(data) }}
+                </pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {# {% for record in data %}
+    {% endfor %} #}
+
+{% endblock %}
+
+
+
+{# Block content gecopieerd vanuit homepage.html.twig: #}
+{% block contentBase %}
+
+    <h4>Dit is de template {{ title }}</h4>
+
+{# Loop #}
+    <ul>
+    {% for record in data %}
+        <li>
+            <img src="{{ record.dish.image }}" style="width: 100px; height: 100px;">
+
+            {{ record.dish.name }}
+
+            {# Fetch rating #}
+
+            {{ record.dish.description_short }}
+
+            {# sub-loop #}
+            <ul>
+                {% for ingr in record.ingredients %}
+                    <li>
+                        <span {% if ingr.id < 2 %}style='color: #F00'{% endif %}>{{ ingr.name }}</span>
+
+                        {# if #}
+                        {%  if ingr.id == 3 %}
+                            <strong>Dit is ID 3!</strong>
+                        {%  endif  %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+    <ul>
+     {# Dump #}
+       <pre>
+        {{ dump(data) }}
+       </pre>
+
 {% endblock %}

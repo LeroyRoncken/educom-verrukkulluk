@@ -18,6 +18,7 @@
     <script type="text/javascript" language="javascript" src="assets/bootstrap/js/bootstrap.js"></script>
     <script src="vegas/vegas.js"></script>
 
+    {# Memu dropdown #}
     <script>
         $(document).ready(function () {
             $("#menu").click(function() {
@@ -38,8 +39,21 @@
 
     {# Vegas #}
     <script>
-        {% block vegasCarousel %}
-        {% endblock %}
+        $(document).ready( function() {
+            
+            var mySlides = [];
+
+            {% for record in data %}
+                mySlides.push({
+                    src: "{{ record.dish.image }}"
+                });
+            {% endfor %}
+            
+            $("#background-image").vegas({
+                slides: mySlides,
+            })
+
+        })
     </script>
 
 </head>
@@ -52,13 +66,13 @@
 {## Header ##}
 
     {# Vegas carousel #}
-    <div {% block headerImage %} {% endblock %}>
+    <div id="background-image">
         
         <div class="row">
 
         {# Logo #}
             <div class="col-4">
-                <a href="http://localhost/educom-verrukkulluk/index.php"><img class=headerLogo src="assets/img/logo-v2.png"></a>
+                <a href="http://localhost/educom-verrukkulluk/index.php"><img class="headerLogo" src="assets/img/logo-v2.png"></a>
             </div>
             
             <div class="col-4"></div>
@@ -72,7 +86,7 @@
             <div id="menuClose" class="menuDropdown boxShadow">
                 <div class="row">
                     <div class="col-5">
-                        <div><img class="menuLogo" src="assets/img/logo-v2.png" onclick="redirectHomepage()"></div>
+                        <a href="http://localhost/educom-verrukkulluk/index.php"><img class="menuLogo" src="assets/img/logo-v2.png"></a>
                     </div>
                     <div class="col-3 menuButton"><h1>Mijn Favorieten</h1></div>
                     <div class="col-4 menuButton"><h1>Mijn Boodschappenlijst</h1></div>
@@ -85,9 +99,6 @@
 
 
 {## Body ##}
-
-    {# <i class="fa fa-calendar"></i> FontAwesome <a href="https://fontawesome.com/icons?d=gallery&m=free">Documentation</a><br>
-    <i class="fa fa-file-pdf"></i><a href="https://www.layoutit.com/build">Layout-it</a> #}
 
     <div class="row m-5">
 

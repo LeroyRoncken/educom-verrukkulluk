@@ -34,7 +34,7 @@ $dish = new dish($db->getConnection());
 
 /*
 URL:
-http://localhost/educom-verrukkulluk/index.php?gerecht_id=4&action=detail
+http://localhost/educom-verrukkulluk/index.php?dish_id=4&action=detail
 */
 
 $dish_id = isset($_GET["dish_id"]) ? $_GET["dish_id"] : "";

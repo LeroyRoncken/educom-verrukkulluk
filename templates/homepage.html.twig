@@ -5,29 +5,6 @@
 <img src="assets/img/verrukkulluk-burger.png"/>
 {% endblock %} #}
 
-{# Header #}
-{# Script and images for the Vegas carousel #}
-{% block vegasCarousel %}
-    $(document).ready( function() {
-
-        const mySlides = [
-            { src: "https://static.ah.nl/static/recepten/img_097765_1224x900_JPG.jpg" },
-            { src: "https://static.ah.nl/static/recepten/img_RAM_PRD147605_1224x900_JPG.jpg" },
-            { src: "https://static.ah.nl/static/recepten/img_118618_1224x900_JPG.jpg" },
-            { src: "https://static.ah.nl/static/recepten/img_RAM_PRD171861_1224x900_JPG.jpg" },
-        ]
-        
-        $("#background-image").vegas({
-            slides: mySlides,
-        })
-
-    })
-{% endblock %}
-
-{% block headerImage %}
-    id="background-image"
-{% endblock %}
-
 
 {# Body #}
 {% block content %}
@@ -59,7 +36,7 @@
 
                     <div class="col-5">
                         {# Knop naar detailpagina #}
-                        <a href="http://localhost/educom-verrukkulluk/index.php?gerecht_id={{ record.dish.id }}&action=detail" class="smullenKnop boxShadow">
+                        <a href="http://localhost/educom-verrukkulluk/index.php?dish_id={{ record.dish.id }}&action=detail" class="smullenKnop boxShadow">
                             Smullen!
                         </a>
                         {# <a href="http://localhost/educom-verrukkulluk/index.php"><button type=submit class="smullenKnop boxShadow my-3"><h4 class="smullenText">Smullen!</h4></a> #}
@@ -77,6 +54,7 @@
             </div>
 
         {% endfor %}
+        
     </div>
 
 {% endblock %}

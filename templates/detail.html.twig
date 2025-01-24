@@ -5,6 +5,40 @@
 {% endblock %} #}
 
 
+{% block script %}
+    <script>
+        $(document).ready(function () {
+            
+            $(".star").click(function() {
+                
+                const ratingValue = $(this).attr("ratingValue")
+                const dish_id = $(this).attr("dishID")
+
+                $.ajax({
+                    url: `http://localhost/educom-verrukkulluk/index.php?dish_id=${dish_id}&rating_value=${ratingValue}&action=rating`,
+                    method: "GET",
+                    success: function(result) {
+                        
+                        ratingAverage = Math.round(result.average);
+                        
+                        $(".star").removeClass("filledStar")
+
+                        $(".star").each( (index, element) => {
+                            const itemValue = $(element).attr("ratingValue")
+                            if(itemValue <= ratingAverage) {
+                                $(element).addClass("filledStar")
+                            }
+                        })
+                    }
+                })
+
+            })
+
+        })
+    </script>
+{% endblock %}
+
+
 {% block content %}
 
     <div class="row">
@@ -32,7 +66,13 @@
 
                             <div class="row mb-3">
                                 <div class="col-9 dishTitle"><h2>{{ record.dish.name }}</h2></div>
-                                <div class="col-3 dishRating">Rating {# {{ record.rating }} #} </div>
+                                <div class="col-3">
+                                    <span class="star" ratingValue="1" dishID={{record.dish.id}}>*</span>
+                                    <span class="star" ratingValue="2" dishID={{record.dish.id}}>*</span>
+                                    <span class="star" ratingValue="3" dishID={{record.dish.id}}>*</span>
+                                    <span class="star" ratingValue="4" dishID={{record.dish.id}}>*</span>
+                                    <span class="star" ratingValue="5" dishID={{record.dish.id}}>*</span>
+                                </div>
                             </div>
 
                             <div class="row d-flex align-items-center mb-2">
@@ -63,8 +103,31 @@
                 </div>
 
                 <div class="row boxShadow">
-                    <div class="col-11 offset-1 boxShadow">
-                        Ingrediënten
+                    <div class="col-12">
+                        
+                        {# <div class="tabbable" id="tabs-96218">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active show" href="#tab1" data-toggle="tab">Section 1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tab2" data-toggle="tab">Section 2</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="panel-340379">
+                                    <p>
+                                        I'm in Section 1.
+                                    </p>
+                                </div>
+                                <div class="tab-pane" id="tab2">
+                                    <p>
+                                        Howdy, I'm in Section 2.
+                                    </p>
+                                </div>
+                            </div>
+                        </div> #}
+
                     </div>
                 </div>
 
@@ -82,6 +145,8 @@
     {% endfor %} #}
 
 {% endblock %}
+
+
 
 
 

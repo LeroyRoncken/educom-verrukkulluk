@@ -19,10 +19,10 @@
     <script src="vegas/vegas.js"></script>
 
     <script>
-    
+
         $(document).ready(function () {
             
-            // Memu dropdown
+            /// Menu dropdown ///
             $("#menu").click(function() {
                 $(".menuDropdown").slideDown()
                 $(".headerLogo").fadeOut()
@@ -34,7 +34,7 @@
                 $(".headerLogo").fadeIn()
             })
 
-            // Vegas
+            /// Vegas ///
             var mySlides = [];
 
             {% for record in data %}
@@ -50,6 +50,9 @@
         })
 
     </script>
+
+    {% block script %}
+    {% endblock %}
 
 </head>
 

@@ -243,7 +243,17 @@ html, body {
     font-size: 14px;
 }
 
-.dishRating{
+.star{
+    color: var(--black);
+    cursor: pointer;
+    font-size: 42px;
+}
+
+.star:hover {
+    color: var(--darker-orange);
+}
+
+.filledStar {
     color: var(--lighter-orange);
 }
 

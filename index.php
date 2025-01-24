@@ -64,17 +64,23 @@ switch($action) {
         header('Content-type: application/json');
 
         // Add new rating to database
-        $info->addRating($dish_id, $rating_value);
+        if($rating_value !== "null") {
+            $info->addRating($dish_id, $rating_value);
+        }
 
         //  Calculate average
+        $average = 0;
         $count = 0;
         $total = 0;
         $ratings = $info->selectInfo($dish_id, 'R');
-        foreach($ratings as $rating) {
-            $count ++;
-            $total += $rating["numerical_field"];
+
+        if(isset($ratings)) {
+            foreach($ratings as $rating) {
+                $count ++;
+                $total += $rating["numerical_field"];
+            }
+            $average = $total / $count;
         }
-        $average = $total / $count;
 
         $output = array("success"=>true, "average"=>$average);
         echo json_encode($output);

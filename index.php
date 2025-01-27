@@ -68,19 +68,21 @@ switch($action) {
             $info->addRating($dish_id, $rating_value);
         }
 
-        //  Calculate average
-        $average = 0;
-        $count = 0;
-        $total = 0;
-        $ratings = $info->selectInfo($dish_id, 'R');
+        ////  Calculate average
+        // $average = 0;
+        // $count = 0;
+        // $total = 0;
+        // $ratings = $info->selectInfo($dish_id, 'R');
 
-        if(isset($ratings)) {
-            foreach($ratings as $rating) {
-                $count ++;
-                $total += $rating["numerical_field"];
-            }
-            $average = $total / $count;
-        }
+        // if(isset($ratings)) {
+        //     foreach($ratings as $rating) {
+        //         $count ++;
+        //         $total += $rating["numerical_field"];
+        //     }
+        //     $average = $total / $count;
+        // }
+
+        $average = $info->selectRatingAverage($dish_id);
 
         $output = array("success"=>true, "average"=>$average);
         echo json_encode($output);

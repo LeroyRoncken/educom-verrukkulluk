@@ -7,6 +7,23 @@
 
 
 {% block script %}
+    {% for record in data %}
+        <script>
+            $(document).ready(function () {
+                var ratingAverage = Math.round( {{ record.ratingAverage }} )
+                var dish_id = {{ record.dish.id }}
+                                
+                // $(`.star[dishID="${dish_id}"]`).removeClass("filledStar")
+
+                $(`.star[dishID="${dish_id}"]`).each( (index, element) => {
+                    var itemValue = $(element).attr("ratingValue")
+                    if(itemValue <= ratingAverage) {
+                        $(element).addClass("filledStar")
+                    }
+                })
+            })
+        </script>
+    {% endfor %}
 {% endblock %}
 
 

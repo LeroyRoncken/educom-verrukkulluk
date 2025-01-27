@@ -10,8 +10,8 @@
             $(document).ready(function () {
                 $(".star").click(function() {
                 
-                    const ratingValue = $(this).attr("ratingValue")
-                    const dish_id = $(this).attr("dishID")
+                    var ratingValue = $(this).attr("ratingValue")
+                    var dish_id = $(this).attr("dishID")
 
                     $.ajax({
                         url: `http://localhost/educom-verrukkulluk/index.php?dish_id=${dish_id}&rating_value=${ratingValue}&action=rating`,
@@ -23,7 +23,7 @@
                             $(".star").removeClass("filledStar")
 
                             $(".star").each( (index, element) => {
-                                const itemValue = $(element).attr("ratingValue")
+                                var itemValue = $(element).attr("ratingValue")
                                 if(itemValue <= ratingAverage) {
                                     $(element).addClass("filledStar")
                                 }
@@ -33,6 +33,23 @@
                 })
             })
         </script>
+
+    {% for record in data %}
+        <script>
+            $(document).ready(function () {
+                var ratingAverage = Math.round( {{ record.ratingAverage }} );
+                                
+                $(".star").removeClass("filledStar")
+
+                $(".star").each( (index, element) => {
+                    var itemValue = $(element).attr("ratingValue")
+                    if(itemValue <= ratingAverage) {
+                        $(element).addClass("filledStar")
+                    }
+                })
+            })
+        </script>
+    {% endfor %}
 {% endblock %}
 
 {# {% block clickRating%}

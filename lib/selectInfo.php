@@ -20,6 +20,16 @@ class dishInfo {
         mysqli_query($this->connection, $sql);
     }
 
+    public function addRating($dish_id, $rating_value) {
+        $sql = "INSERT INTO dish_info (record_type, dish_id, numerical_field) VALUES ('R', $dish_id, $rating_value)";
+        mysqli_query($this->connection, $sql);
+    }
+    
+    public function deleteRating() {
+        $sql = "DELETE FROM dish_info WHERE record_type = 'R'";
+        mysqli_query($this->connection, $sql);
+    }
+
     public function selectInfo($dish_id, $record_type) {
         
         $sql = "SELECT * FROM dish_info WHERE dish_id = $dish_id AND record_type = '$record_type'";

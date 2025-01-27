@@ -44,17 +44,17 @@ class dish{
             $favorite = $this->selectRecordType($output["id"], 'F');
 
             $dish_array[] = [
-                "Dish" => $output,
-                "User" => $user,
-                "Ingredients" => $ingredients,
-                "Calories (kcal)" => $calories,
-                "Price (cents)" => $price,
-                "Rating" => $rating,
-                "Steps" => $steps,
-                "Comments" => $comments,
-                "Kitchen" => $kitchen,
-                "Type" => $type,
-                "Favorite" => $favorite
+                "dish" => $output,
+                "user" => $user,
+                "ingredients" => $ingredients,
+                "calories" => $calories, // (kcal)
+                "price" => $price, // (cents)
+                "rating" => $rating,
+                "steps" => $steps,
+                "comments" => $comments,
+                "kitchen" => $kitchen,
+                "type" => $type,
+                "favorite" => $favorite
             ];
         }
 

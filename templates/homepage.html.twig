@@ -6,6 +6,10 @@
 {% endblock %} #}
 
 
+{% block script %}
+{% endblock %}
+
+
 {# Body #}
 {% block content %}
 
@@ -23,7 +27,13 @@
 
                 <div class="row mt-4">
                     <div class="col-9 dishTitle"><h2>{{ record.dish.name }}</h2></div>
-                    <div class="col-3 dishRating">Rating {# {{ record.rating }} #} </div>
+                    <div class="col-3">
+                        <span class="star" ratingValue="1" dishID={{record.dish.id}}>*</span>
+                        <span class="star" ratingValue="2" dishID={{record.dish.id}}>*</span>
+                        <span class="star" ratingValue="3" dishID={{record.dish.id}}>*</span>
+                        <span class="star" ratingValue="4" dishID={{record.dish.id}}>*</span>
+                        <span class="star" ratingValue="5" dishID={{record.dish.id}}>*</span>
+                    </div>
                 </div>
 
                 <div class="row">

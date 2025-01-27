@@ -6,45 +6,41 @@
 
 
 {% block script %}
-    <script>
-        $(document).ready(function () {
-            
-            var dish_id = $(".star").attr("dishID"); // Try to use variable
-
-            function updateRatings(rating = null) {
+        <script>
+            $(document).ready(function () {
+                $(".star").click(function() {
                 
-                $.ajax({
-                    url: `http://localhost/educom-verrukkulluk/index.php?dish_id=${dish_id}&rating_value=${rating}&action=rating`,
-                    method: "GET",
-                    success: function(result) {
-                        
-                        ratingAverage = Math.round(result.average);
-                        
-                        $(".star").each( (index, element) => {
-                            const itemValue = $(element).attr("ratingValue");
-                            if(itemValue <= ratingAverage) {
-                                $(element).addClass("filledStar");
-                            }else{
-                                $(element).removeClass("filledStar");
-                            }
-                        })
-                    }
+                    const ratingValue = $(this).attr("ratingValue")
+                    const dish_id = $(this).attr("dishID")
+
+                    $.ajax({
+                        url: `http://localhost/educom-verrukkulluk/index.php?dish_id=${dish_id}&rating_value=${ratingValue}&action=rating`,
+                        method: "GET",
+                        success: function(result) {
+                            
+                            var ratingAverage = Math.round(result.average);
+                            
+                            $(".star").removeClass("filledStar")
+
+                            $(".star").each( (index, element) => {
+                                const itemValue = $(element).attr("ratingValue")
+                                if(itemValue <= ratingAverage) {
+                                    $(element).addClass("filledStar")
+                                }
+                            })
+                        }
+                    })
                 })
-            }
-
-            updateRatings();
-
-            $(".star").click(function() {
-                
-                var rating = $(this).attr("ratingValue");
-
-                updateRatings(rating);
-
             })
-
-        })
-    </script>
+        </script>
 {% endblock %}
+
+{# {% block clickRating%}
+    $(".star").click(function() {
+        var rating = $(this).attr("ratingValue");
+        updateRatings(rating);
+    })
+{% endblock %} #}
 
 
 {% block content %}

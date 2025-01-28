@@ -107,6 +107,11 @@ h3, h4, h5 {
     margin-top: auto;
     margin-bottom: auto;
     color: var(--lighter-red);
+    text-decoration: none !important;
+}
+
+.menuButton:hover {
+    color: var(--darker-red);
 }
 
 /* .headerDetail{
@@ -299,6 +304,25 @@ html, body {
 
 .detailKTDescr{
     font-size: 14px;
+}
+
+
+/** Lijst **/
+.groceries{
+    overflow-y: scroll;
+    max-height: 1000px;
+}
+
+/* .scroll{
+    overflow: scroll;
+} */
+
+.groceryImg{
+    width: 100%;
+}
+
+.remove{
+    cursor: pointer;
 }
 
 

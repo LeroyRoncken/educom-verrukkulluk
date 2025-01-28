@@ -1,31 +1,6 @@
 {# Opnemen van de "Main" file #}
 {% extends "main.html.twig" %}
 
-{# {% block header %}
-<img src="assets/img/verrukkulluk-burger.png"/>
-{% endblock %} #}
-
-
-{% block script %}
-    {% for record in data %}
-        <script>
-            $(document).ready(function () {
-                var ratingAverage = Math.round( {{ record.ratingAverage }} )
-                var dish_id = {{ record.dish.id }}
-                                
-                // $(`.star[dishID="${dish_id}"]`).removeClass("filledStar")
-
-                $(`.star[dishID="${dish_id}"]`).each( (index, element) => {
-                    var itemValue = $(element).attr("ratingValue")
-                    if(itemValue <= ratingAverage) {
-                        $(element).addClass("filledStar")
-                    }
-                })
-            })
-        </script>
-    {% endfor %}
-{% endblock %}
-
 
 {# Body #}
 {% block content %}
@@ -63,7 +38,7 @@
 
                     <div class="col-5">
                         {# Knop naar detailpagina #}
-                        <a href="http://localhost/educom-verrukkulluk/index.php?dish_id={{ record.dish.id }}&action=detail" class="smullenKnop boxShadow">
+                        <a href="./index.php?dish_id={{ record.dish.id }}&action=detail" class="smullenKnop boxShadow">
                             Smullen!
                         </a>
                         {# <a href="http://localhost/educom-verrukkulluk/index.php"><button type=submit class="smullenKnop boxShadow my-3"><h4 class="smullenText">Smullen!</h4></a> #}

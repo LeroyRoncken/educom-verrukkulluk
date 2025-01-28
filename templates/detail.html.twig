@@ -1,9 +1,5 @@
 {% extends "main.html.twig" %}
 
-{# {% block header %}
-<h1>Hallo Bram</h1>
-{% endblock %} #}
-
 
 {% block script %}
         <script>
@@ -18,7 +14,7 @@
                         method: "GET",
                         success: function(result) {
                             
-                            var ratingAverage = Math.round(result.average);
+                            var ratingAverage = Math.round(result.average)
                             
                             $(".star").removeClass("filledStar")
 
@@ -33,31 +29,7 @@
                 })
             })
         </script>
-
-    {% for record in data %}
-        <script>
-            $(document).ready(function () {
-                var ratingAverage = Math.round( {{ record.ratingAverage }} );
-                                
-                $(".star").removeClass("filledStar")
-
-                $(".star").each( (index, element) => {
-                    var itemValue = $(element).attr("ratingValue")
-                    if(itemValue <= ratingAverage) {
-                        $(element).addClass("filledStar")
-                    }
-                })
-            })
-        </script>
-    {% endfor %}
 {% endblock %}
-
-{# {% block clickRating%}
-    $(".star").click(function() {
-        var rating = $(this).attr("ratingValue");
-        updateRatings(rating);
-    })
-{% endblock %} #}
 
 
 {% block content %}
@@ -66,97 +38,113 @@
 
         <div class="col-1"></div>
             
-            <div class="col-11">
+        <div class="col-11">
 
+            {% for record in data %}
                 <div class="row boxshadow mb-5">
 
-                    {% for record in data %}
+                    <div class="col-6 p-0">
+                        <img class="detailImage" src="{{ record.dish.image }}"/>
+                    </div>
 
-                        <div class="col-6 p-0">
-                            <img class="detailImage" src="{{ record.dish.image }}"/>
-                        </div>
-
-                        <div class="col-5 offset-1">
-                            
-                            <div class="row my-3">
-                                <div class="dishNumbers">
-                                    <i class="fa-solid fa-euro-sign dishIcon"></i>{{ (record.price / 100)|number_format(2)}}
-                                    <i class="fa-solid fa-fire dishIcon"></i>{{ record.calories|round }}
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <div class="col-9 dishTitle"><h2>{{ record.dish.name }}</h2></div>
-                                <div class="col-3">
-                                    <span class="star" ratingValue="1" dishID={{record.dish.id}}>*</span>
-                                    <span class="star" ratingValue="2" dishID={{record.dish.id}}>*</span>
-                                    <span class="star" ratingValue="3" dishID={{record.dish.id}}>*</span>
-                                    <span class="star" ratingValue="4" dishID={{record.dish.id}}>*</span>
-                                    <span class="star" ratingValue="5" dishID={{record.dish.id}}>*</span>
-                                </div>
-                            </div>
-
-                            <div class="row d-flex align-items-center mb-2">
-                                <div class="col-6">
-                                    <span class="kitchenType">Keuken</span>
-                                    <span class="detailKTDescr">{{ record.kitchen.description }}</span>
-                                </div>
-                                <div class="col-5 offset-1">
-                                    <span class="col-2 kitchenType">Type</span>
-                                    <span class="col-3 detailKTDescr">{{ record.type.description }}</span>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="dishDescr">{{ record.dish.description_long }}</div>
-                            </div>
-
-                            <div class="col-5">
-                                <a href="http://localhost/educom-verrukkulluk/index.php?dish_id={{ record.dish.id }}&action=detail" class="smullenKnop boxShadow mt-5">
-                                    Op lijst
-                                </a>
-                            </div>
+                    <div class="col-5 offset-1">
                         
+                        <div class="row my-3">
+                            <div class="dishNumbers">
+                                <i class="fa-solid fa-euro-sign dishIcon"></i>{{ (record.price / 100)|number_format(2)}}
+                                <i class="fa-solid fa-fire dishIcon"></i>{{ record.calories|round }}
+                            </div>
                         </div>
 
-                    {% endfor %}
+                        <div class="row mb-3">
+                            <div class="col-9 dishTitle"><h2>{{ record.dish.name }}</h2></div>
+                            <div class="col-3">
+                                <span class="star" ratingValue="1" dishID={{record.dish.id}}>*</span>
+                                <span class="star" ratingValue="2" dishID={{record.dish.id}}>*</span>
+                                <span class="star" ratingValue="3" dishID={{record.dish.id}}>*</span>
+                                <span class="star" ratingValue="4" dishID={{record.dish.id}}>*</span>
+                                <span class="star" ratingValue="5" dishID={{record.dish.id}}>*</span>
+                            </div>
+                        </div>
+
+                        <div class="row d-flex align-items-center mb-2">
+                            <div class="col-6">
+                                <span class="kitchenType">Keuken</span>
+                                <span class="detailKTDescr">{{ record.kitchen.description }}</span>
+                            </div>
+                            <div class="col-5 offset-1">
+                                <span class="col-2 kitchenType">Type</span>
+                                <span class="col-3 detailKTDescr">{{ record.type.description }}</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="dishDescr">{{ record.dish.description_long }}</div>
+                        </div>
+
+                        <div class="col-5">
+                            <a href="./index.php?dish_id={{ record.dish.id }}&action=op-lijst" class="smullenKnop boxShadow mt-5">
+                                Op lijst
+                            </a>
+                        </div>
+                    
+                    </div>
 
                 </div>
 
-                <div class="row boxShadow">
+                <div class="row">
                     <div class="col-12">
-                        
-                        {# <div class="tabbable" id="tabs-96218">
+
+                        <div class="tabbable" id="tabs-483088">
                             <ul class="nav nav-tabs">
-                                <li class="nav-item">
-                                    <a class="nav-link active show" href="#tab1" data-toggle="tab">Section 1</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tab2" data-toggle="tab">Section 2</a>
-                                </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active show" href="#tab1" data-toggle="tab">Ingredienten</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link show" href="#tab2" data-toggle="tab">Bereidingswijze</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link show" href="#tab3" data-toggle="tab">Opmerkingen</a>
+                            </li>
                             </ul>
+                    
                             <div class="tab-content">
-                                <div class="tab-pane active" id="panel-340379">
+                                        
+                                <div class="tab-pane active boxShadow" id="tab1">
                                     <p>
-                                        I'm in Section 1.
+                                        {% for ingredients in record.ingredients %}
+                                            {{ ingredients.name }}
+                                        {% endfor %}
                                     </p>
                                 </div>
-                                <div class="tab-pane" id="tab2">
+
+                                <div class="tab-pane boxShadow" id="tab2">
                                     <p>
-                                        Howdy, I'm in Section 2.
+                                        {% for steps in record.steps %}
+                                            {{ steps.numerical_field }}.
+                                            {{ steps.text_field }}<br><br>
+                                        {% endfor %}
                                     </p>
                                 </div>
+                        
+                                <div class="tab-pane boxShadow" id="tab3">
+                                    <p>
+                                        {% for comments in record.comments %}
+                                            {{ comments.name }}<br>
+                                            {{ comments.text_field }}<br><br>
+                                        {% endfor %}
+                                    </p>
+                                </div>
+                            
                             </div>
-                        </div> #}
+                        </div>
 
                     </div>
                 </div>
+            {% endfor %}
 
-                <pre>
-                    <br>{{ dump(data) }}
-                </pre>
-
-            </div>
+        </div>
 
         </div>
 
@@ -205,8 +193,8 @@
     {% endfor %}
     <ul>
      {# Dump #}
-       <pre>
+       {# <pre>
         {{ dump(data) }}
-       </pre>
+       </pre> #}
 
 {% endblock %}

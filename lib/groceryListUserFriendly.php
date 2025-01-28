@@ -49,6 +49,13 @@ class groceryList {
         }
     }
 
+    public function removeGrocery($user_id, $article_id) {
+        $grocery = $this->selectGrocery($user_id, $article_id);
+        $sql = "DELETE FROM groceries WHERE user_id = $user_id AND article_id = $article_id";
+        mysqli_query($this->connection, $sql);
+    }
+
+
     private function selectIngredient($dish_id) {
         return($this->ingredient->selectIngredient($dish_id));
     }
@@ -72,14 +79,17 @@ class groceryList {
         return(false);
     }
     
-    private function selectGroceries($user_id) {
+    public function selectGroceries($user_id) {
         $sql = "SELECT * FROM groceries WHERE user_id = $user_id";
         $result = mysqli_query($this->connection, $sql);
 
         $groceries = [];
 
         while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-            $groceries[] = $row;
+            $art_id = $row["article_id"];
+            $ingrArt = $this->selectArticle($art_id);
+            
+            $groceries[] = [...$row, ...$ingrArt];
         }
         return($groceries);
     }

@@ -30,7 +30,7 @@ $dish = new dish($db->getConnection());
 // $kt = new kitchenType($db->getConnection());
 // $ingr = new ingredient($db->getConnection());
 $info = new dishInfo($db->getConnection());
-// $groce = new groceryList($db->getConnection());
+$groce = new groceryList($db->getConnection());
 
 // $deleteAllRatings = $info->deleteRating();
 
@@ -38,10 +38,13 @@ $info = new dishInfo($db->getConnection());
 URL:
     http://localhost/educom-verrukkulluk/index.php?dish_id=4&action=detail
     http://localhost/educom-verrukkulluk/index.php?dish_id=4&rating_value=3&action=rating
+    http://localhost/educom-verrukkulluk/index.php?user_id=2&action=lijst
 */
 
 $dish_id = isset($_GET["dish_id"]) ? $_GET["dish_id"] : "";
 $rating_value = isset($_GET["rating_value"]) ? $_GET["rating_value"] : "";
+$user_id = isset($_GET["user_id"]) ? $_GET["user_id"] : "1";
+$article_id = isset($_GET["article_id"]) ? $_GET["article_id"] : "";
 $action = isset($_GET["action"]) ? $_GET["action"] : "homepage";
 
 switch($action) {
@@ -59,6 +62,30 @@ switch($action) {
         $title = "detail page";
         break;
     }
+
+    case "lijst": {
+        $data = $dish->selectDish();
+        $groceData = $groce->selectGroceries($user_id);
+        $template = 'lijst.html.twig';
+        $title = "boodschappen lijst";
+        break;
+    }
+
+    case "op-lijst": {
+        $groce->addArticle($dish_id, $user_id);
+        $data = $dish->selectDish();
+        $groceData = $groce->selectGroceries($user_id);
+        $template = 'lijst.html.twig';
+        $title = "boodschappen lijst";
+        break;
+    }
+
+    // case "remove": {
+    //     // remove article from database
+    //     $groce->removeGrocery($user_id, $article_id);
+
+    //     // calculate new total
+    // }
 
     case "rating": {
         header('Content-type: application/json');
@@ -101,4 +128,4 @@ $template = $twig->load($template);
 
 
 /// En tonen die handel!
-echo $template->render(["title" => $title, "data" => $data]);
+echo $template->render(["title" => $title, "data" => $data, "groceData" => $groceData]);

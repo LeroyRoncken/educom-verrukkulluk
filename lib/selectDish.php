@@ -36,6 +36,7 @@ class dish{
             $ingredients = $this->selectIngredient($output["id"]);
             $calories = $this->calcCalories($ingredients);
             $price = $this->calcPrice($ingredients);
+            $ratingAverage = $this->selectRatingAverage($output["id"]);
             $rating = $this->selectRecordType($output["id"], 'R');
             $steps = $this->selectRecordType($output["id"], 'S');
             $comments = $this->selectRecordType($output["id"], 'C');
@@ -49,6 +50,7 @@ class dish{
                 "ingredients" => $ingredients,
                 "calories" => $calories, // (kcal)
                 "price" => $price, // (cents)
+                "ratingAverage"=> $ratingAverage,
                 "rating" => $rating,
                 "steps" => $steps,
                 "comments" => $comments,
@@ -78,6 +80,10 @@ class dish{
 
     private function selectInfo($dish_id, $record_type) {
         return($this->info->selectInfo($dish_id, $record_type));
+    }
+
+    private function selectRatingAverage($dish_id) {
+        return($this->info->selectRatingAverage($dish_id));
     }
 
     private function selectKitchenType($kitchentype_id) {

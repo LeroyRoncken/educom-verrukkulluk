@@ -30,6 +30,22 @@ class dishInfo {
         mysqli_query($this->connection, $sql);
     }
 
+    public function selectRatingAverage($dish_id) {
+        $average = 0;
+        $count = 0;
+        $total = 0;
+        $ratings = $this->selectInfo($dish_id, 'R');
+
+        if(count($ratings) > 0) {
+            foreach($ratings as $rating) {
+                $total += $rating["numerical_field"];
+            }
+            $average = $total / count($ratings);
+        }
+
+        return($average);
+    }
+
     public function selectInfo($dish_id, $record_type) {
         
         $sql = "SELECT * FROM dish_info WHERE dish_id = $dish_id AND record_type = '$record_type'";

@@ -1,0 +1,73 @@
+{% extends "main.html.twig" %}
+
+
+{# {% block script %}
+        <script>
+            $(document).ready(function () {
+                $(".remove").click(function() {
+                
+                    var user_id = 1
+                    var articleID = $(this).attr("articleID")
+
+                    $.ajax({
+                        url: `http://localhost/educom-verrukkulluk/index.php?user_id=${user_id}&article_id=${articleID}&action=remove`,
+                        method: "GET",
+                        success: function(result) {
+                            
+                        }
+                    })
+
+                })
+            })
+        </script>
+{% endblock %} #}
+
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-11">
+
+            <div class="row boxshadow">
+
+                <div class="row m-4"><h1>Boodschappen</h1></div>
+                <div class="row spacer"></div>
+                
+                <div class="class row groceries">
+                    {% for record in groceData %}
+                        <div class="row">
+                            <div class="col-1"><img src="{{ record.image }}" class="groceryImg"></div>
+                            <div class="col-8 p-2">
+                                <div class="row">{{ record.name }}</div>
+                                <div class="row mb-4">{{ record.description }}</div>
+                            </div>
+                            <div class="col-1">{{ record.amount }}</div>
+                            <div class="col-1">{{ (( record.amount * record.price_cent ) / 100)|number_format(2) }}</div>
+                            <div class="col-1 remove" articleID={{ record.article_id }}>Remove</div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="row">
+                    <div class="col-2 m-4">
+                        <h2>Totaal</h2>
+                    </div>
+                    <div class="col-8"></div>
+                    <div class="col-1"></div>
+                    <div class="col-1"></div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+
+    {# Dump #}
+    {# <div class="row boxshadow">
+        <pre>
+            {{ dump(data) }}
+        </pre>
+    </div> #}
+
+{% endblock %}

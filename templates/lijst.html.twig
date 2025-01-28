@@ -10,7 +10,7 @@
                     var articleID = $(this).attr("articleID")
 
                     $.ajax({
-                        url: `http://localhost/educom-verrukkulluk/index.php?user_id=${user_id}&article_id=${articleID}&action=remove`,
+                        url: `./index.php?user_id=${user_id}&article_id=${articleID}&action=remove`,
                         method: "GET",
                         success: function(result) {
                             
@@ -36,6 +36,7 @@
                 
                 <div class="class row groceries">
                     {% for record in groceData %}
+                        
                         <div class="row">
                             <div class="col-1"><img src="{{ record.image }}" class="groceryImg"></div>
                             <div class="col-8 p-2">
@@ -44,8 +45,13 @@
                             </div>
                             <div class="col-1">{{ record.amount }}</div>
                             <div class="col-1">{{ (( record.amount * record.price_cent ) / 100)|number_format(2) }}</div>
-                            <div class="col-1 remove" articleID={{ record.article_id }}>Remove</div>
+                            <div class="col-1 remove" articleID={{ record.article_id }}>
+                                <form method="POST" action="./index.php?user_id={{record.user_id}}&article_id={{record.article_id}}&action=remove">
+                                    <button>Remove</button>
+                                </form>
+                            </div>
                         </div>
+
                     {% endfor %}
                 </div>
 

@@ -10,7 +10,7 @@
                     var dish_id = $(this).attr("dishID")
 
                     $.ajax({
-                        url: `http://localhost/educom-verrukkulluk/index.php?dish_id=${dish_id}&rating_value=${ratingValue}&action=rating`,
+                        url: `./index.php?dish_id=${dish_id}&rating_value=${ratingValue}&action=rating`,
                         method: "GET",
                         success: function(result) {
                             

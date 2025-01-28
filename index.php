@@ -46,6 +46,8 @@ $rating_value = isset($_GET["rating_value"]) ? $_GET["rating_value"] : "";
 $user_id = isset($_GET["user_id"]) ? $_GET["user_id"] : "1";
 $article_id = isset($_GET["article_id"]) ? $_GET["article_id"] : "";
 $action = isset($_GET["action"]) ? $_GET["action"] : "homepage";
+$data = [];
+$groceData = [];
 
 switch($action) {
 
@@ -67,16 +69,25 @@ switch($action) {
         $data = $dish->selectDish();
         $groceData = $groce->selectGroceries($user_id);
         $template = 'lijst.html.twig';
-        $title = "boodschappen lijst";
+        $title = "boodschappenlijst";
         break;
     }
 
     case "op-lijst": {
-        $groce->addArticle($dish_id, $user_id);
         $data = $dish->selectDish();
+        $groce->addArticle($dish_id, $user_id);
         $groceData = $groce->selectGroceries($user_id);
         $template = 'lijst.html.twig';
-        $title = "boodschappen lijst";
+        $title = "boodschappenlijst";
+        break;
+    }
+
+    case "remove": {
+        $data = $dish->selectDish();
+        $groce->removeGrocery($user_id, $article_id);
+        $groceData = $groce->selectGroceries($user_id);
+        $template = 'lijst.html.twig';
+        $title = "boodschappenlijst";
         break;
     }
 

@@ -50,7 +50,6 @@ class groceryList {
     }
 
     public function removeGrocery($user_id, $article_id) {
-        $grocery = $this->selectGrocery($user_id, $article_id);
         $sql = "DELETE FROM groceries WHERE user_id = $user_id AND article_id = $article_id";
         mysqli_query($this->connection, $sql);
     }

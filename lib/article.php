@@ -4,8 +4,8 @@ class article {
 
     private $connection;
 
-    public function __construct($connection) {
-        $this->connection = $connection;
+    public function __construct($constructConnection) {
+        $this->connection = $constructConnection;
     }
   
     public function selectArticle($article_id) {

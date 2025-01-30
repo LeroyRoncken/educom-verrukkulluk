@@ -49,7 +49,6 @@ $query = isset($_GET["query"]) ? $_GET["query"] : "";
 $action = isset($_GET["action"]) ? $_GET["action"] : "homepage";
 $data = [];
 $groceData = [];
-$searchResult = [];
 
 switch($action) {
 
@@ -68,9 +67,8 @@ switch($action) {
     }
 
     case "search": {
-        $data = $dish->selectDish();
-        $searchResult = $dish->search($query);
-        $template = 'search.html.twig';
+        $data = $dish->search($query);
+        $template = 'homepage.html.twig';
         $title = "zoeken";
         break;
     }
@@ -125,4 +123,4 @@ $template = $twig->load($template);
 
 
 /// En tonen die handel!
-echo $template->render(["title" => $title, "data" => $data, "groceData" => $groceData, "searchResult" => $searchResult]);
+echo $template->render(["title" => $title, "data" => $data, "groceData" => $groceData]);

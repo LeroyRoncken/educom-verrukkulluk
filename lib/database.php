@@ -15,7 +15,7 @@ class database {
        (HOST,
         USER,
         PASSWORD,
-        DATABASE );
+        DATABASE);
     }
 
     public function getConnection() {

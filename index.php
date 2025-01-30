@@ -45,9 +45,11 @@ $dish_id = isset($_GET["dish_id"]) ? $_GET["dish_id"] : "";
 $rating_value = isset($_GET["rating_value"]) ? $_GET["rating_value"] : "";
 $user_id = isset($_GET["user_id"]) ? $_GET["user_id"] : "1";
 $article_id = isset($_GET["article_id"]) ? $_GET["article_id"] : "";
+$query = isset($_GET["query"]) ? $_GET["query"] : "";
 $action = isset($_GET["action"]) ? $_GET["action"] : "homepage";
 $data = [];
 $groceData = [];
+$searchResult = [];
 
 switch($action) {
 
@@ -62,6 +64,14 @@ switch($action) {
         $data = $dish->selectDish($dish_id);
         $template = 'detail.html.twig';
         $title = "detail page";
+        break;
+    }
+
+    case "search": {
+        $data = $dish->selectDish();
+        $searchResult = $dish->search($query);
+        $template = 'search.html.twig';
+        $title = "zoeken";
         break;
     }
 
@@ -91,13 +101,6 @@ switch($action) {
         break;
     }
 
-    // case "remove": {
-    //     // remove article from database
-    //     $groce->removeGrocery($user_id, $article_id);
-
-    //     // calculate new total
-    // }
-
     case "rating": {
         header('Content-type: application/json');
 
@@ -106,30 +109,13 @@ switch($action) {
             $info->addRating($dish_id, $rating_value);
         }
 
-        ////  Calculate average
-        // $average = 0;
-        // $count = 0;
-        // $total = 0;
-        // $ratings = $info->selectInfo($dish_id, 'R');
-
-        // if(isset($ratings)) {
-        //     foreach($ratings as $rating) {
-        //         $count ++;
-        //         $total += $rating["numerical_field"];
-        //     }
-        //     $average = $total / $count;
-        // }
-
         $average = $info->selectRatingAverage($dish_id);
 
         $output = array("success"=>true, "average"=>$average);
         echo json_encode($output);
 
         die();
-        // break;
     }
-
-    /// etc
 
 }
 
@@ -139,4 +125,4 @@ $template = $twig->load($template);
 
 
 /// En tonen die handel!
-echo $template->render(["title" => $title, "data" => $data, "groceData" => $groceData]);
+echo $template->render(["title" => $title, "data" => $data, "groceData" => $groceData, "searchResult" => $searchResult]);

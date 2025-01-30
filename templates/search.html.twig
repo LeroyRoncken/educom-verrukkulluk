@@ -1,0 +1,70 @@
+{% extends "main.html.twig" %}
+
+
+{% block content %}
+
+    <div class="row">
+
+        {% for record in searchResult %}
+
+            <div class="col-5 offset-1 dishCard boxShadow mb-5">
+
+                <div class="row">
+                    <div class="col-12 p-0">
+                        <img src="{{ record.dish.image }}" class="dishImage">
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-9 dishTitle"><h2>{{ record.dish.name }}</h2></div>
+                    <div class="col-3">
+                        <span class="star" ratingValue="1" dishID={{record.dish.id}}>*</span>
+                        <span class="star" ratingValue="2" dishID={{record.dish.id}}>*</span>
+                        <span class="star" ratingValue="3" dishID={{record.dish.id}}>*</span>
+                        <span class="star" ratingValue="4" dishID={{record.dish.id}}>*</span>
+                        <span class="star" ratingValue="5" dishID={{record.dish.id}}>*</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="dishDescr"><br>{{ record.dish.description_short }}<br><br></div>
+                </div>
+
+                {# <div class="row spacer"></div> #}
+
+                <div class="row mb-3">
+
+                    <div class="col-5">
+                        {# Knop naar detailpagina #}
+                        <a href="./index.php?dish_id={{ record.dish.id }}&action=detail" class="smullenKnop boxShadow">
+                            Smullen!
+                        </a>
+                    </div>
+
+                    <div class="col-7 d-flex align-items-center justify-content-end">
+                        <div class="dishNumbers">
+                            <i class="fa-solid fa-euro-sign dishIcon"></i>{{ (record.price / 100)|number_format(2)}}
+                            <i class="fa-solid fa-fire dishIcon"></i>{{ record.calories|round }}
+                        </div>
+                    </div>
+                
+                </div>
+
+            </div>
+
+        {% endfor %}
+        
+    </div>
+
+
+
+    {# Dump #}
+    <pre>
+        {{ dump(searchResult) }}
+    </pre>
+
+    {# <pre>
+        {{ dump(data) }}
+    </pre> #}
+
+{% endblock %}

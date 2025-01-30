@@ -66,8 +66,6 @@
                 var ratingAverage = Math.round( {{ record.ratingAverage }} );
                 var dish_id = {{ record.dish.id }}
                                 
-                // $(".star").removeClass("filledStar")
-
                 $(`.star[dishID="${dish_id}"]`).each( (index, element) => {
                     var itemValue = $(element).attr("ratingValue")
                     if(itemValue <= ratingAverage) {
@@ -77,30 +75,6 @@
             })
         </script>
     {% endfor %}
-
-    {# <script>
-        /// Rating ///
-        function updateRatings(dish_id, rating = null) {
-            
-            $.ajax({
-                url: `http://localhost/educom-verrukkulluk/index.php?dish_id=${dish_id}&rating_value=${rating}&action=rating`,
-                method: "GET",
-                success: function(result) {
-                    
-                    var ratingAverage = Math.round(result.average);
-                    
-                    $(`.star[dishID="${dish_id}"]`).each( (index, element) => {
-                        const itemValue = $(element).attr("ratingValue");
-                        if(itemValue <= ratingAverage) {
-                            $(element).addClass("filledStar");
-                        }else{
-                            $(element).removeClass("filledStar");
-                        }
-                    })
-                }
-            })
-        }
-    </script> #}
 
     {% block script %}
     {% endblock %}
@@ -128,7 +102,15 @@
             
         {# Clickable menu button #}
             <div class="col-4 d-flex justify-content-end pt-5 pr-5">
-                <div id="menu"><i class="fa-solid fa-bars menu-trigger"></i></div>
+                <div class="search">
+                    <form method="GET" action="./index.php">
+                        <input type="hidden" name="action" value="search">
+                        <input type="text" name="query" placeholder="Zoeken">
+                    </form>
+                </div>
+                <div id="menu">
+                    <i class="fa-solid fa-bars menu-trigger"></i>
+                </div>
             </div>
 
         {# Dropdown menu #}
@@ -164,7 +146,6 @@
                                     
                 <div><img class="titleLogo" src="assets/img/verrukkulluk-agenda.png"></div>
 
-            {# Agenda entries, maybe use loop instead? #}
                 <div class="row">
 
                     {% set agendaEntry = {'De perfecte pizzabodem': 'Een workshop over de wetenschap achter het perfecte pizzadeeg, onder leiding van Donatello.', 'Pizza bakken': 'Leer de geheimen van het bakken van de klassieke New Yorkse pizza samen met Raphael.', 'Pizza proeverij': 'Leonardo neemt je mee op een ontdekkingsreis van nieuwe smaakcombinaties en leert je ze op nieuwe manieren waarderen.', 'Ninja pizza': 'Leer van Michelangelo de eeuwenoude kunst van het laten verdwijnen van pizza - zonder sporen.', 'Pizza bestellen': 'De Turtles leren je het geheim van de beste pizza bestellen. Bovendien zorgen zij dat je nooit meer te veel betaalt voor een te laat bezorgde pizza.'} %}

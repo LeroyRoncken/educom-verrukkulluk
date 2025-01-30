@@ -122,6 +122,7 @@ class dish{
         return($required_pack);
     }
 
+
     // Select a specific record type
 
     public function selectRecordType($dish_id, $record_type) {
@@ -133,5 +134,87 @@ class dish{
         }
         return($info);
     }
+
+
+    // Search filter
+
+    public function search($query) {
+        $dish_array = $this->selectDish();
+        $matches = [];
+
+        foreach ($dish_array as $dish) {
+            if ($this->searchRecord($dish, $query)) {
+                $matches[] = $dish;
+            } 
+        }
+
+        if(!empty($matches)) {
+            echo "Zoekresultaten voor '$query':";
+            return($matches); 
+        } else {
+            echo "Er zijn geen zoekresultaten gevonden voor '$query'.";
+            return($matches);
+        }
+    }
     
+    private function searchRecord($dish, $query) {
+        foreach ($dish as $value) {
+            if (is_string($value)) {
+                if (preg_match("/$query/i", $value)) {
+                    return(true);
+                }
+            }
+
+            if (is_array($value) && $this->searchRecord($value, $query)) {
+                return(true);
+            }
+        }
+        return false;
+    }
+
+    // public function search($query) {
+    //     $dish_array = $this->selectDish();
+    //     // $matches = [];
+
+    //     $result = $this->searchRecord($dish_array, $query);
+
+    //     if ($result) {
+    //         echo "Found a match: " . $result;
+    //     } else {
+    //         echo "Geen resultaten gevonden.";
+    //     }
+    // }
+
+    // private function searchRecord($dish_array, $query) {
+    //     $escaped_query = preg_quote($query, '/');
+
+    //     foreach ($dish_array as $record) {
+    //         if (is_array($record)) {
+    //             // echo "<pre>" , var_dump ($record) , "</pre>";
+    //             foreach ($record as $value) {
+    //                 if (is_array($value)) {
+    //                     // echo "<pre>" , var_dump ($value) , "</pre>";
+    //                     $result = $this->searchRecord($value, $escaped_query);
+    //                     if ($result !== null) {
+    //                         return $result;
+    //                     }
+    //                 } else {
+    //                     // echo "<pre>" , var_dump ($value) , "</pre>";
+    //                     if (preg_match("/$escaped_query/i", (string)$value)) {
+    //                         return $value;
+    //                     }
+    //                 }
+    //             }
+    //         } else {
+    //             // echo "<pre>" , var_dump ($record) , "</pre>";
+    //             if (preg_match("/$escaped_query/i", (string)$record)) {
+    //                 return $record;
+    //             }
+    //         }
+    //     }
+    //     echo "Looking for: $escaped_query\n";
+
+    //     return null;
+    // }
+
 }
